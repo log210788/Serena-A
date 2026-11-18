@@ -1,0 +1,2556 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="page-title">Student's Peaceful English Sanctuary | Lesson Transcript & Vocabulary</title>
+
+  <!-- Google Fonts: Cormorant Garamond (Literary Serif), Plus Jakarta Sans (Soft Modern UI), JetBrains Mono (Timestamps & IPA) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            parchment: {
+              50: '#fbf9f5',
+              100: '#f6f1e7',
+              200: '#ede3d1',
+              300: '#dfd0b5',
+              400: '#cbb38e',
+              500: '#b6966b',
+            },
+            autumn: {
+              50: '#fcf6f0',
+              100: '#f7e9db',
+              200: '#eed0b5',
+              300: '#e2b086',
+              400: '#d38c57',
+              500: '#be6f38',
+              600: '#a3582b',
+              700: '#854524',
+              800: '#6c3921',
+            },
+            sage: {
+              50: '#f4f7f5',
+              100: '#e4ece7',
+              200: '#cadad1',
+              300: '#a5bfb1',
+              400: '#7b9f8d',
+              500: '#5b826f',
+              600: '#476858',
+              700: '#3a5448',
+              800: '#30443b',
+            },
+            slatewarm: {
+              700: '#3d4441',
+              800: '#2b312e',
+              900: '#1e2321',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- GSAP for Gentle Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+  <!-- Popper & Tippy.js for Interactive Vocabulary Explanations -->
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css" />
+
+  <!-- Canvas Confetti for Gentle Practice Encouragement -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-base: #f9f6f0;
+      --bg-card: rgba(255, 253, 249, 0.90);
+      --bg-subcard: rgba(255, 255, 255, 0.94);
+      --border-soft: #e6decb;
+      --border-accent: #d9c8b0;
+      --text-main: #2b312e;
+      --text-muted: #5c6660;
+      --grad-1: rgba(238, 208, 181, 0.42);
+      --grad-2: rgba(202, 218, 209, 0.48);
+      --grad-3: rgba(246, 241, 231, 0.70);
+    }
+
+    body[data-theme="winchester"] {
+      --bg-base: #f3f6f5;
+      --bg-card: rgba(252, 254, 253, 0.91);
+      --bg-subcard: rgba(255, 255, 255, 0.95);
+      --border-soft: #d7e2dc;
+      --border-accent: #b8ccc2;
+      --text-main: #26312d;
+      --text-muted: #52635c;
+      --grad-1: rgba(202, 218, 209, 0.50);
+      --grad-2: rgba(219, 228, 238, 0.48);
+      --grad-3: rgba(244, 240, 230, 0.55);
+    }
+
+    body[data-theme="twilight"] {
+      --bg-base: #f5efe6;
+      --bg-card: rgba(253, 249, 242, 0.92);
+      --bg-subcard: rgba(255, 252, 247, 0.96);
+      --border-soft: #e2d2be;
+      --border-accent: #cfaea0;
+      --text-main: #2d2622;
+      --text-muted: #665850;
+      --grad-1: rgba(226, 176, 134, 0.36);
+      --grad-2: rgba(214, 196, 176, 0.42);
+      --grad-3: rgba(235, 220, 202, 0.55);
+    }
+
+    body {
+      background-color: var(--bg-base);
+      background-image:
+        radial-gradient(at 8% 5%, var(--grad-1) 0px, transparent 52%),
+        radial-gradient(at 92% 18%, var(--grad-2) 0px, transparent 52%),
+        radial-gradient(at 50% 88%, var(--grad-3) 0px, transparent 58%);
+      background-attachment: fixed;
+      color: var(--text-main);
+      transition: background-color 0.5s ease, color 0.4s ease;
+      overflow-x: hidden;
+    }
+
+    .sanctuary-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 12px 36px -10px rgba(91, 130, 111, 0.08), 0 4px 14px -3px rgba(43, 49, 46, 0.04);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .sanctuary-subcard {
+      background: var(--bg-subcard);
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 4px 14px -4px rgba(43, 49, 46, 0.04);
+      transition: all 0.25s ease;
+    }
+
+    /* Inline Vocabulary Highlight in Transcript */
+    .vocab-mark {
+      display: inline-block;
+      background: linear-gradient(120deg, rgba(226, 176, 134, 0.25) 0%, rgba(165, 191, 177, 0.28) 100%);
+      border-bottom: 2px dashed #a3582b;
+      color: #5b3216;
+      font-weight: 600;
+      padding: 0px 5px;
+      margin: 0 1px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .vocab-mark:hover, .vocab-mark.active-vocab {
+      background: linear-gradient(120deg, rgba(190, 111, 56, 0.25) 0%, rgba(91, 130, 111, 0.32) 100%);
+      border-bottom-style: solid;
+      border-bottom-color: #476858;
+      transform: translateY(-1px);
+      box-shadow: 0 3px 10px rgba(163, 88, 43, 0.14);
+    }
+
+    body.hide-vocab-highlights .vocab-mark {
+      background: transparent !important;
+      border-bottom: none !important;
+      color: inherit !important;
+      font-weight: inherit !important;
+      padding: 0 !important;
+      box-shadow: none !important;
+    }
+
+    /* Note-taker fix badge */
+    .asr-fix-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.72rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #f4f7f5;
+      color: #476858;
+      border: 1px solid #cadad1;
+      padding: 1px 7px;
+      border-radius: 999px;
+      margin-left: 4px;
+      vertical-align: middle;
+    }
+
+    body.hide-asr-fixes .asr-fix-pill {
+      display: none !important;
+    }
+
+    /* Custom Tippy Tooltip Theme: Peaceful Autumn */
+    .tippy-box[data-theme~='autumn-sanctuary'] {
+      background-color: #fffdf9;
+      color: #2b312e;
+      border: 1px solid #dfd0b5;
+      border-radius: 1rem;
+      box-shadow: 0 20px 38px -8px rgba(61, 68, 65, 0.16), 0 6px 16px -4px rgba(163, 88, 43, 0.08);
+      padding: 0.35rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .tippy-box[data-theme~='autumn-sanctuary'][data-placement^='top'] > .tippy-arrow::before {
+      border-top-color: #dfd0b5;
+    }
+    .tippy-box[data-theme~='autumn-sanctuary'][data-placement^='bottom'] > .tippy-arrow::before {
+      border-bottom-color: #dfd0b5;
+    }
+
+    /* Highlight pulse when jumping to a transcript line */
+    @keyframes gentleGlow {
+      0% { background-color: rgba(226, 176, 134, 0.45); transform: scale(1.005); }
+      50% { background-color: rgba(165, 191, 177, 0.38); }
+      100% { background-color: transparent; transform: scale(1); }
+    }
+    .turn-highlight-flash {
+      animation: gentleGlow 2.8s ease-out;
+    }
+
+    @media print {
+      .no-print, #autumn-breeze-canvas { display: none !important; }
+      body { background: #fff !important; }
+      .sanctuary-card, .sanctuary-subcard { box-shadow: none !important; border: 1px solid #ccc !important; }
+    }
+  </style>
+</head>
+<body data-theme="kensington" class="font-sans antialiased min-h-screen selection:bg-autumn-200 selection:text-slatewarm-900 relative">
+
+  <!-- CALMING AUTUMN BREEZE CANVAS OVERLAY -->
+  <canvas id="autumn-breeze-canvas" class="fixed inset-0 pointer-events-none z-20 opacity-80"></canvas>
+
+  <!-- TOP MULTI-LESSON ARCHIVE BAR -->
+  <aside class="bg-gradient-to-r from-sage-800 via-sage-700 to-autumn-700 text-white text-xs py-2 px-4 shadow-sm relative z-50 flex items-center justify-between gap-3 flex-wrap no-print">
+    <div class="flex items-center gap-2 flex-wrap">
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-300 text-stone-900 font-bold text-[11px] shadow">
+        🌿 Lesson 01 • Nov 18, 2026 (Current)
+      </span>
+      <a href="./transcripts/11-18-2026.txt" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 hover:bg-white/30 text-white font-mono text-[11px] font-semibold transition">
+        📄 Raw Krisp Transcript (11-18-2026.txt) →
+      </a>
+    </div>
+    <div class="flex items-center gap-3 text-[11px]">
+      <span class="opacity-90 font-mono">🇮🇹 Serena A. • Preply English Sanctuary with Louie</span>
+    </div>
+  </aside>
+
+  <!-- STICKY PEACEFUL NAVIGATION & ATMOSPHERE BAR -->
+  <header class="sticky top-0 z-40 border-b border-[#e6decb]/90 bg-[#fbf9f5]/85 backdrop-blur-md no-print">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-3">
+        <div id="brand-initial" class="w-10 h-10 rounded-2xl bg-gradient-to-br from-sage-600 via-sage-500 to-autumn-500 flex items-center justify-center text-white font-serif text-xl font-bold shadow-sm">
+          S
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span id="brand-title" class="font-serif font-bold text-lg sm:text-xl tracking-tight text-slatewarm-900">Student's Peaceful English Sanctuary</span>
+            <span id="brand-badge" class="hidden sm:inline-flex items-center gap-1 px-2.5 py-0.5 text-[11px] font-medium rounded-full bg-sage-100 text-sage-800 border border-sage-200">
+              Lesson 01 • Conversation & Vocabulary
+            </span>
+          </div>
+          <p id="brand-subtitle" class="text-[11px] text-stone-500 hidden md:block">A calm, tidy space with your corrected lesson transcript, timestamps, and flagged vocabulary</p>
+        </div>
+      </div>
+
+      <!-- Calming Atmosphere Controls -->
+      <div class="flex flex-wrap items-center gap-2">
+        <div class="flex items-center gap-1.5 bg-white/90 border border-[#dfd0b5] rounded-xl px-2.5 py-1 shadow-sm">
+          <button id="soundscape-btn" onclick="toggleSoundscape()" class="flex items-center gap-1.5 text-xs font-semibold text-sage-700 hover:text-sage-900 transition px-1.5 py-0.5 rounded-lg">
+            <i data-lucide="wind" class="w-3.5 h-3.5 text-autumn-600"></i>
+            <span id="soundscape-label">London Breeze Audio: Off</span>
+          </button>
+          <select id="soundscape-preset" onchange="changeSoundscapePreset(this.value)" class="text-[11px] bg-parchment-50 border border-parchment-200 rounded-lg px-1.5 py-0.5 text-stone-700 focus:outline-none">
+            <option value="breeze">🍂 Kensington Breeze</option>
+            <option value="rain">🌧️ Soft London Rain</option>
+            <option value="study">🕯️ Warm Study Hearth</option>
+          </select>
+          <input id="soundscape-volume" type="range" min="0.05" max="0.6" step="0.05" value="0.22" oninput="updateSoundscapeVolume(this.value)" class="w-14 accent-sage-600 cursor-pointer hidden sm:block" />
+        </div>
+
+        <button id="leaves-toggle-btn" onclick="cycleLeafBreeze()" class="px-2.5 py-1.5 rounded-xl bg-white/90 hover:bg-autumn-50 border border-[#dfd0b5] text-xs font-medium text-stone-700 flex items-center gap-1.5 shadow-sm transition">
+          <i data-lucide="leaf" class="w-3.5 h-3.5 text-autumn-600"></i>
+          <span id="leaves-label" class="hidden sm:inline">Leaves: Gentle</span>
+        </button>
+
+        <div class="flex items-center gap-1 bg-white/90 border border-[#dfd0b5] rounded-xl px-2 py-1 shadow-sm text-xs">
+          <i data-lucide="volume-2" class="w-3.5 h-3.5 text-sage-600"></i>
+          <button onclick="setVoiceRate(0.85)" id="rate-slow" class="px-1.5 py-0.5 rounded-md text-[11px] text-stone-600 hover:bg-parchment-100 transition">0.85×</button>
+          <button onclick="setVoiceRate(1.0)" id="rate-normal" class="px-1.5 py-0.5 rounded-md text-[11px] bg-sage-600 text-white font-semibold transition">UK 1×</button>
+        </div>
+
+        <div class="hidden lg:flex items-center gap-1 bg-white/90 border border-[#dfd0b5] rounded-xl p-1 text-[11px] shadow-sm">
+          <button onclick="setThemeMood('kensington')" id="theme-kensington" class="px-2 py-0.5 rounded-lg bg-autumn-100 text-autumn-800 font-semibold transition">Bath Stone</button>
+          <button onclick="setThemeMood('winchester')" id="theme-winchester" class="px-2 py-0.5 rounded-lg text-stone-600 hover:text-stone-900 transition">Winchester Mist</button>
+          <button onclick="setThemeMood('twilight')" id="theme-twilight" class="px-2 py-0.5 rounded-lg text-stone-600 hover:text-stone-900 transition">Warm Study</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-7 space-y-7 relative z-10">
+
+    <!-- HERO BANNER -->
+    <section class="sanctuary-card rounded-3xl p-6 sm:p-9 relative overflow-hidden">
+      <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-7 items-center">
+        <div class="lg:col-span-8 space-y-3.5">
+          <div id="hero-meta-pill" class="inline-flex flex-wrap items-center gap-2 px-3 py-1 rounded-full bg-sage-100/90 border border-sage-200 text-sage-800 text-xs font-medium"></div>
+          <h1 id="hero-heading" class="font-serif text-3xl sm:text-4xl lg:text-[2.65rem] font-bold text-slatewarm-900 leading-[1.16]"></h1>
+          <p id="hero-intro" class="text-stone-600 text-sm sm:text-base leading-relaxed max-w-3xl"></p>
+        </div>
+
+        <div class="lg:col-span-4 grid grid-cols-2 gap-3">
+          <div onclick="switchTab('transcript')" class="cursor-pointer p-4 rounded-2xl bg-parchment-50/95 border border-parchment-300 hover:border-autumn-400 transition shadow-sm">
+            <div class="text-[11px] font-mono font-semibold uppercase text-autumn-700" id="stat-duration">Full Audio Log</div>
+            <div class="font-serif font-bold text-slatewarm-900 text-lg mt-0.5">Full Transcript</div>
+            <p class="text-[11px] text-stone-600 mt-0.5">Every turn tidied with inline vocab & timestamps</p>
+          </div>
+          <div onclick="switchTab('vocab')" class="cursor-pointer p-4 rounded-2xl bg-sage-50/95 border border-sage-200 hover:border-sage-400 transition shadow-sm">
+            <div class="text-[11px] font-mono font-semibold uppercase text-sage-700" id="stat-vocab-count">Flagged Words</div>
+            <div class="font-serif font-bold text-slatewarm-900 text-lg mt-0.5">Vocabulary & Idioms</div>
+            <p class="text-[11px] text-stone-600 mt-0.5">B2–C2 words, UK audio & translations</p>
+          </div>
+          <div onclick="switchTab('fixes')" class="cursor-pointer p-4 rounded-2xl bg-autumn-50/95 border border-autumn-200 hover:border-autumn-400 transition shadow-sm">
+            <div class="text-[11px] font-mono font-semibold uppercase text-autumn-700" id="stat-fixes-count">Cleaned Up</div>
+            <div class="font-serif font-bold text-slatewarm-900 text-lg mt-0.5">Note-Taker Fixes</div>
+            <p class="text-[11px] text-stone-600 mt-0.5">Sorted spelling errors & gentle phrasing tips</p>
+          </div>
+          <div onclick="switchTab('places')" class="cursor-pointer p-4 rounded-2xl bg-parchment-50/95 border border-parchment-300 hover:border-sage-400 transition shadow-sm">
+            <div class="text-[11px] font-mono font-semibold uppercase text-sage-700">Topics & Review</div>
+            <div class="font-serif font-bold text-slatewarm-900 text-lg mt-0.5">Places & Practice</div>
+            <p class="text-[11px] text-stone-600 mt-0.5">Cultural notes, flashcards & gentle quiz</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5-TAB NAVIGATION BAR -->
+    <nav class="sanctuary-card rounded-2xl p-2 flex flex-wrap items-center justify-between gap-2 no-print">
+      <div class="flex flex-wrap items-center gap-1.5 w-full sm:w-auto">
+        <button onclick="switchTab('transcript')" id="tab-btn-transcript" class="tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 bg-sage-700 text-white shadow-sm">
+          <i data-lucide="message-square-quote" class="w-4 h-4"></i>
+          <span>1. Lesson Transcript & Inline Vocab</span>
+        </button>
+        <button onclick="switchTab('vocab')" id="tab-btn-vocab" class="tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 text-stone-700 hover:bg-parchment-100">
+          <i data-lucide="book-marked" class="w-4 h-4 text-autumn-600"></i>
+          <span>2. Vocabulary Dictionary</span>
+        </button>
+        <button onclick="switchTab('fixes')" id="tab-btn-fixes" class="tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 text-stone-700 hover:bg-parchment-100">
+          <i data-lucide="sparkles" class="w-4 h-4 text-sage-600"></i>
+          <span>3. Note-Taker Fixes & Gentle Notes</span>
+        </button>
+        <button onclick="switchTab('places')" id="tab-btn-places" class="tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 text-stone-700 hover:bg-parchment-100">
+          <i data-lucide="landmark" class="w-4 h-4 text-autumn-600"></i>
+          <span>4. Masterclass & Cultural Topics</span>
+        </button>
+        <button onclick="switchTab('practice')" id="tab-btn-practice" class="tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 text-stone-700 hover:bg-parchment-100">
+          <i data-lucide="coffee" class="w-4 h-4 text-sage-600"></i>
+          <span>5. Peaceful Practice</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- TAB 1: FULL LESSON TRANSCRIPT -->
+    <section id="tab-panel-transcript" class="tab-panel space-y-6">
+      <div class="sanctuary-card rounded-3xl p-5 sm:p-6 space-y-4">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-[#e6decb] pb-4">
+          <div>
+            <span class="text-xs font-mono uppercase tracking-widest text-sage-700 font-semibold">Interactive Conversation Transcript</span>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900 mt-0.5">
+              Our Conversation — With Vocabulary Explained Right Where We Said It
+            </h2>
+          </div>
+          <div class="flex flex-wrap items-center gap-2 shrink-0">
+            <input id="transcript-search" type="text" oninput="filterTranscript()" placeholder="Search transcript or time..." class="px-3 py-1.5 rounded-xl bg-white border border-[#dfd0b5] text-xs text-stone-800 focus:outline-none w-48" />
+            <select id="speaker-filter" onchange="filterTranscript()" class="px-3 py-1.5 rounded-xl bg-white border border-[#dfd0b5] text-xs font-medium text-stone-700">
+              <option value="all">Both Speakers</option>
+              <option value="student" id="opt-student-speaker">Student Only</option>
+              <option value="Louie">Louie Only</option>
+            </select>
+            <button onclick="toggleVocabHighlights()" id="btn-toggle-highlights" class="px-3 py-1.5 rounded-xl bg-autumn-100 text-autumn-800 border border-autumn-300 text-xs font-semibold">
+              <span>Vocab Highlights: On</span>
+            </button>
+            <button onclick="toggleAsrBadges()" id="btn-toggle-asr" class="px-3 py-1.5 rounded-xl bg-sage-100 text-sage-800 border border-sage-300 text-xs font-semibold">
+              <span>Note-Taker Fixes: Visible</span>
+            </button>
+          </div>
+        </div>
+        <div id="chapter-pills-bar" class="flex flex-wrap items-center gap-1.5 pt-1"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        <div class="lg:col-span-8 space-y-4" id="transcript-stream-container"></div>
+        <aside class="lg:col-span-4 lg:sticky lg:top-20 space-y-4">
+          <div class="sanctuary-card rounded-3xl p-5 sm:p-6 border-t-4 border-t-autumn-500 space-y-4" id="vocab-inspector-card">
+            <div class="flex items-center justify-between gap-2">
+              <span class="text-[11px] font-mono uppercase tracking-widest text-autumn-700 font-semibold">Vocabulary Spotlight</span>
+              <span id="insp-time" class="px-2.5 py-0.5 rounded-full bg-parchment-100 border border-parchment-300 font-mono text-xs text-stone-700">🕒 00:00</span>
+            </div>
+            <div>
+              <div class="flex items-center justify-between gap-2">
+                <h3 id="insp-word" class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900">Select a word</h3>
+                <button id="insp-audio-btn" onclick="speakWord('Welcome')" class="p-2.5 rounded-xl bg-sage-100 hover:bg-sage-200 text-sage-800 transition shrink-0">
+                  <i data-lucide="volume-2" class="w-4 h-4"></i>
+                </button>
+              </div>
+              <div class="flex flex-wrap items-center gap-2 mt-1">
+                <span id="insp-ipa" class="text-xs font-mono text-stone-500"></span>
+                <span id="insp-pos" class="px-2 py-0.5 text-[11px] rounded-md bg-parchment-100 text-stone-700 font-medium"></span>
+                <span id="insp-level" class="px-2 py-0.5 text-[11px] rounded-md bg-autumn-100 text-autumn-800 font-mono font-semibold"></span>
+              </div>
+            </div>
+            <div class="p-3.5 rounded-2xl bg-parchment-50 border border-parchment-200 space-y-1">
+              <div class="text-[11px] font-mono uppercase tracking-wider text-stone-500">Meaning & Nuance</div>
+              <p id="insp-def" class="text-xs sm:text-sm text-slatewarm-800 leading-relaxed"></p>
+            </div>
+            <div class="p-3.5 rounded-2xl bg-sage-50/80 border border-sage-200 space-y-1">
+              <div class="text-[11px] font-mono uppercase tracking-wider text-sage-700">How It Was Used in Our Lesson</div>
+              <p id="insp-quote" class="text-xs italic text-stone-700 leading-relaxed"></p>
+            </div>
+            <div class="flex items-center justify-between pt-1 text-xs border-t border-[#e6decb]">
+              <span class="text-stone-500" id="insp-l1-label">Translation:</span>
+              <span id="insp-l1" class="font-semibold text-sage-800"></span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- TAB 2: VOCABULARY DICTIONARY -->
+    <section id="tab-panel-vocab" class="tab-panel hidden space-y-6">
+      <div class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-5">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-[#e6decb] pb-5">
+          <div>
+            <span class="text-xs font-mono uppercase tracking-widest text-autumn-700 font-semibold">Timestamped Lexicon</span>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900 mt-1">Vocabulary, Idioms & Expressions</h2>
+          </div>
+          <div class="flex flex-wrap items-center gap-2">
+            <input id="vocab-search" type="text" oninput="renderVocabGrid()" placeholder="Search word, meaning, time..." class="px-3 py-2 rounded-xl bg-white border border-[#dfd0b5] text-xs text-stone-800 w-52" />
+            <select id="vocab-level-filter" onchange="renderVocabGrid()" class="px-3 py-2 rounded-xl bg-white border border-[#dfd0b5] text-xs font-medium text-stone-700">
+              <option value="all">All Levels (B2–C2)</option>
+              <option value="C2">C2 Mastery</option>
+              <option value="C1">C1 Advanced</option>
+              <option value="B2">B2 Upper-Intermediate</option>
+            </select>
+          </div>
+        </div>
+        <div id="vocab-cards-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-2"></div>
+      </div>
+    </section>
+
+    <!-- TAB 3: NOTE-TAKER FIXES & GENTLE NOTES -->
+    <section id="tab-panel-fixes" class="tab-panel hidden space-y-6">
+      <div class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-6">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900">Your Natural Strengths & Gentle Phrasing Polishes</h2>
+        <div class="p-5 rounded-2xl bg-sage-50/90 border border-sage-200 space-y-3">
+          <div class="font-serif font-bold text-xl text-sage-800">Expressions You Used Naturally & Accurately Today</div>
+          <div id="student-strengths-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="gentle-polishes-grid"></div>
+      </div>
+
+      <div class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-5">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900">How We Sorted Out the Automated Note-Taker's Spelling Mistakes</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="asr-fixes-grid"></div>
+      </div>
+    </section>
+
+    <!-- TAB 4: CULTURAL PLACES & PROMPTS -->
+    <section id="tab-panel-places" class="tab-panel hidden space-y-6">
+      <div class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-6">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900">Masterclass Persuasion Frameworks & Cultural Topics from Our Conversation</h2>
+        <div id="cultural-places-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+      </div>
+    </section>
+
+    <!-- TAB 5: PEACEFUL PRACTICE -->
+    <section id="tab-panel-practice" class="tab-panel hidden space-y-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <div class="lg:col-span-6 sanctuary-card rounded-3xl p-6 sm:p-8 space-y-5 flex flex-col justify-between">
+          <div class="flex items-center justify-between">
+            <h3 class="font-serif text-2xl font-bold text-slatewarm-900">Gentle Vocabulary Flashcards</h3>
+            <span id="fc-counter" class="text-xs font-mono text-stone-500">Card 1</span>
+          </div>
+          <div onclick="flipFlashcard()" class="cursor-pointer sanctuary-subcard rounded-2xl p-7 min-h-[240px] flex flex-col items-center justify-center text-center space-y-3 border-2 border-[#dfd0b5] hover:border-autumn-400 transition select-none">
+            <span id="fc-badge" class="px-2.5 py-0.5 rounded-full bg-autumn-100 text-autumn-800 text-[11px] font-mono"></span>
+            <h4 id="fc-front-title" class="font-serif text-3xl font-bold text-slatewarm-900"></h4>
+            <p id="fc-sub" class="text-xs sm:text-sm text-stone-600 max-w-md leading-relaxed"></p>
+            <div id="fc-back-details" class="hidden space-y-2 pt-2 border-t border-parchment-200 w-full">
+              <p id="fc-quote" class="text-xs italic text-sage-800"></p>
+              <p id="fc-l1" class="text-xs font-semibold text-autumn-700"></p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between gap-2 pt-2">
+            <button onclick="prevFlashcard()" class="px-4 py-2 rounded-xl bg-parchment-100 text-xs font-semibold text-stone-700">← Previous</button>
+            <button onclick="speakCurrentFlashcard()" class="px-4 py-2 rounded-xl bg-sage-100 text-xs font-semibold text-sage-800">🔊 Listen (UK)</button>
+            <button onclick="nextFlashcard()" class="px-4 py-2 rounded-xl bg-sage-700 text-xs font-semibold text-white">Next →</button>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 sanctuary-card rounded-3xl p-6 sm:p-8 space-y-5">
+          <div class="flex items-center justify-between">
+            <h3 class="font-serif text-2xl font-bold text-slatewarm-900">Match the Word to Our Conversation</h3>
+            <span id="quiz-score-badge" class="px-3 py-1 rounded-full bg-sage-100 text-sage-800 text-xs font-mono font-semibold">0 Completed</span>
+          </div>
+          <div id="quiz-container" class="space-y-4 max-h-[420px] overflow-y-auto pr-1"></div>
+        </div>
+      </div>
+    
+      <!-- 3 Thoughtful Conversation Prompts -->
+      <div class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-4">
+        <div class="flex items-center gap-2 text-autumn-800 font-serif font-bold text-2xl">
+          <i data-lucide="coffee" class="w-5 h-5 text-autumn-600"></i>
+          <span>3 Thoughtful Conversation Prompts for Serena (For Next Lesson)</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm">
+          <div class="sanctuary-subcard rounded-2xl p-5 space-y-2 border-l-4 border-l-sage-500">
+            <span class="text-[11px] font-mono uppercase text-sage-700 font-semibold">Prompt 01 • The 4-Step Macro Pitch</span>
+            <h4 class="font-serif font-bold text-lg text-slatewarm-900">Persuading a Busy Stakeholder in Italy</h4>
+            <p class="text-stone-600 leading-relaxed">
+              Think of a real workplace improvement or client initiative at your consulting firm in Italy. Pitch it in 60 seconds using our 4-step arc: <strong>1. Macro Problem</strong> (workload/crunch time) → <strong>2. Business Effect</strong> → <strong>3. Concrete Solution</strong> → <strong>4. Frictionless Implementation</strong>.
+            </p>
+          </div>
+          <div class="sanctuary-subcard rounded-2xl p-5 space-y-2 border-l-4 border-l-autumn-500">
+            <span class="text-[11px] font-mono uppercase text-autumn-700 font-semibold">Prompt 02 • Vocabulary → Vernacular</span>
+            <h4 class="font-serif font-bold text-lg text-slatewarm-900">The "No Vague Words" Consulting Sprint</h4>
+            <p class="text-stone-600 leading-relaxed">
+              Describe your busiest week of the autumn consulting cycle without once saying <em>"stuff"</em> or <em>"things"</em>. Deliberately weave in <strong>heavy workload</strong>, <strong>crunch time</strong>, <strong>work flat out</strong>, <strong>keep morale up</strong>, and <strong>coherent</strong>.
+            </p>
+          </div>
+          <div class="sanctuary-subcard rounded-2xl p-5 space-y-2 border-l-4 border-l-sage-500">
+            <span class="text-[11px] font-mono uppercase text-sage-700 font-semibold">Prompt 03 • Specialist & London Story</span>
+            <h4 class="font-serif font-bold text-lg text-slatewarm-900">Ear Specialist Update & London 2015</h4>
+            <p class="text-stone-600 leading-relaxed">
+              Tell Louie how your afternoon visit to the ear specialist went (<em>therapy, internal pressure, recovery</em>), and share one vivid story from your 2015 week in <strong>London</strong> explaining why England felt like such a <strong>progressive</strong> place to live.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    // =========================================================================
+    // TODO FOR AI MODEL: POPULATE LESSON_CONFIG AND THE DATA OBJECTS BELOW
+    // =========================================================================
+        const LESSON_CONFIG = {
+      studentName: "Serena",
+      lessonNumber: "Lesson 01",
+      lessonDate: "Wednesday, November 18, 2026",
+      lessonSubtitle: "33.6 Min • Persuasive Conversation Structure, Macro Storytelling & Active Vernacular",
+      l1FlagAndLabel: "🇮🇹 In italiano:",
+      heroHeadingHtml: `Welcome, Serena — Your <span class="text-autumn-700 italic font-semibold">Peaceful Sanctuary</span> for Structured English & Persuasion`,
+      heroIntroText: `Here is your complete, forensically cleaned transcript from our first lesson (00:00 to 30:50), with 53 flagged B2–C2 vocabulary items, Italian translations, audio pronunciation, and our 4-Step Macro Persuasion Framework.`,
+      defaultSpotlightKey: "vernacular"
+    };
+
+    // 1. Flagged Vocabulary Dictionary (53 items with timestamps & Italian connections)
+    const VOCAB_DB = {
+      "inflammation": {
+        word: "inflammation",
+        ipa: "/ˌɪn.fləˈmeɪ.ʃən/",
+        pos: "noun",
+        level: "B2",
+        time: "00:15",
+        turnId: "turn-6",
+        cat: "health",
+        def: "A medical condition in which a part of the body becomes red, swollen, hot, and often painful, especially as a reaction to infection.",
+        quote: "Serena (00:15): \"...I'm having an ear inflammation, I guess, so I have been experiencing for one week a continuous whistle in my ear.\"",
+        l1: "infiammazione (es. otite / infiammazione all'orecchio)"
+      },
+      "tinnitus": {
+        word: "continuous whistle (tinnitus)",
+        ipa: "/tɪˈnaɪ.təs/",
+        pos: "noun",
+        level: "C1",
+        time: "00:15",
+        turnId: "turn-6",
+        cat: "health",
+        def: "A persistent ringing, whistling, or buzzing sound in one or both ears when no external sound is present.",
+        quote: "Serena (00:15): \"...I have been experiencing for one week a continuous whistle in my ear.\"",
+        l1: "acufene / fischio o ronzio continuo nell'orecchio"
+      },
+      "specialist": {
+        word: "specialist (ENT)",
+        ipa: "/ˈspeʃ.əl.ɪst/",
+        pos: "noun",
+        level: "B2",
+        time: "00:15",
+        turnId: "turn-6",
+        cat: "health",
+        def: "A doctor who has expert training in a specific branch of medicine (such as an ear, nose, and throat / ENT specialist).",
+        quote: "Serena (00:15): \"...hopefully I'm going to a specialist this afternoon.\"",
+        l1: "medico specialista (otorinolaringoiatra)"
+      },
+      "therapy": {
+        word: "therapy / treatment",
+        ipa: "/ˈθer.ə.pi/",
+        pos: "noun",
+        level: "B2",
+        time: "00:15",
+        turnId: "turn-6",
+        cat: "health",
+        def: "The medical treatment of an illness, injury, or condition over a period of time.",
+        quote: "Serena (00:15): \"...so I hope I will have a good therapy for that.\"",
+        l1: "terapia / cura medica"
+      },
+      "take-a-step-up": {
+        word: "take a step up",
+        ipa: "/teɪk ə step ʌp/",
+        pos: "idiom",
+        level: "C1",
+        time: "01:26",
+        turnId: "turn-12",
+        cat: "fluency",
+        def: "To advance to a higher, more challenging, or more sophisticated level of skill or performance.",
+        quote: "Serena (01:26): \"I decided to change my tutor because I wanted to take a step up in my English level.\"",
+        l1: "fare un salto di qualità / passare a un livello superiore"
+      },
+      "conversational": {
+        word: "conversational",
+        ipa: "/ˌkɒn.vəˈseɪ.ʃən.əl/",
+        pos: "adjective",
+        level: "B2",
+        time: "01:26",
+        turnId: "turn-12",
+        cat: "fluency",
+        def: "Relating to informal, everyday spoken dialogue rather than formal or structured discourse.",
+        quote: "Serena (01:26): \"I've been practicing conversational English.\"",
+        l1: "conversazionale / colloquiale"
+      },
+      "structured": {
+        word: "structured",
+        ipa: "/ˈstrʌk.tʃəd/",
+        pos: "adjective",
+        level: "B2",
+        time: "01:26",
+        turnId: "turn-12",
+        cat: "fluency",
+        def: "Organized with a clear logical framework, progression of ideas, and deliberate design.",
+        quote: "Serena (01:26): \"Now my goal is to move from conversational English to a more structured English.\"",
+        l1: "strutturato / ben articolato"
+      },
+      "formulation": {
+        word: "formulation",
+        ipa: "/ˌfɔː.mjəˈleɪ.ʃən/",
+        pos: "noun",
+        level: "C1",
+        time: "01:26",
+        turnId: "turn-12",
+        cat: "fluency",
+        def: "The careful and precise way in which ideas, arguments, or sentences are put together and expressed.",
+        quote: "Serena (01:26): \"...simply having a higher level of vocabulary, formulation of sentences, and that kind of thing.\"",
+        l1: "formulazione / costruzione della frase"
+      },
+      "day-to-day": {
+        word: "day-to-day",
+        ipa: "/ˌdeɪ.təˈdeɪ/",
+        pos: "noun / adj",
+        level: "B2",
+        time: "02:56",
+        turnId: "turn-13",
+        cat: "business",
+        def: "Happening as part of ordinary, everyday routine or regular work life.",
+        quote: "Louie (02:56): \"How much English do you speak in your day-to-day?\"",
+        l1: "quotidianità / nella vita di tutti i giorni"
+      },
+      "consultant": {
+        word: "consultant",
+        ipa: "/kənˈsʌl.tənt/",
+        pos: "noun",
+        level: "B2",
+        time: "03:07",
+        turnId: "turn-14",
+        cat: "business",
+        def: "A professional who provides expert strategic or technical advice to companies or organizations.",
+        quote: "Serena (03:07): \"I don't use English at my work because I'm a consultant and I work for Italy.\"",
+        l1: "consulente aziendale"
+      },
+      "necessity": {
+        word: "necessity",
+        ipa: "/nəˈses.ə.ti/",
+        pos: "noun",
+        level: "B2",
+        time: "03:07",
+        turnId: "turn-14",
+        cat: "business",
+        def: "Something that is required or essential; an unavoidable need.",
+        quote: "Serena (03:07): \"So I don't have the necessity to speak in English. This is my personal and professional goal.\"",
+        l1: "necessità / esigenza"
+      },
+      "perk": {
+        word: "perk",
+        ipa: "/pɜːk/",
+        pos: "noun",
+        level: "C1",
+        time: "03:48",
+        turnId: "turn-17",
+        cat: "business",
+        def: "An extra benefit or advantage given to employees in addition to their regular salary (short for 'perquisite').",
+        quote: "Louie (03:48): \"Lovely, that's a lovely perk, right? A lovely perk that they pay for Preply is absolutely amazing.\"",
+        l1: "benefit aziendale / vantaggio extra"
+      },
+      "transcribe": {
+        word: "transcribe",
+        ipa: "/trænˈskraɪb/",
+        pos: "verb",
+        level: "C1",
+        time: "04:06",
+        turnId: "turn-19",
+        cat: "fluency",
+        def: "To convert live speech or audio into a written text record word for word.",
+        quote: "Louie (04:06): \"I do not record the lessons. However, it's being transcribed right now.\"",
+        l1: "trascrivere"
+      },
+      "vernacular": {
+        word: "vernacular",
+        ipa: "/vəˈnæk.jə.lə(r)/",
+        pos: "noun",
+        level: "C2",
+        time: "05:06",
+        turnId: "turn-21",
+        cat: "fluency",
+        def: "The active, natural everyday language and word choices that a person actually uses when speaking (as opposed to passive vocabulary they merely recognize).",
+        quote: "Louie (05:06): \"I always try to upgrade your language, vocabulary, and vernacular in conversation.\"",
+        l1: "lessico attivo / linguaggio d'uso quotidiano"
+      },
+      "take-the-burden-off": {
+        word: "take the burden off",
+        ipa: "/teɪk ðə ˈbɜː.dən ɒf/",
+        pos: "idiom",
+        level: "C1",
+        time: "05:58",
+        turnId: "turn-25",
+        cat: "fluency",
+        def: "To relieve someone of a heavy responsibility, worry, or mental effort so they can focus freely.",
+        quote: "Louie (05:58): \"It's so that you don't have to worry about notes as much in the moment... So I try to take the burden off you.\"",
+        l1: "togliere il peso / alleggerire dal carico"
+      },
+      "tailored": {
+        word: "tailored",
+        ipa: "/ˈteɪ.ləd/",
+        pos: "adjective",
+        level: "C1",
+        time: "08:13",
+        turnId: "turn-31",
+        cat: "fluency",
+        def: "Made or adapted specifically to suit a particular person, need, or purpose (like a bespoke suit).",
+        quote: "Louie (08:13): \"A little bit more tailored to the sessions because you can speak directly to the notes.\"",
+        l1: "su misura / personalizzato"
+      },
+      "recap": {
+        word: "recap",
+        ipa: "/ˈriː.kæp/",
+        pos: "noun",
+        level: "B2",
+        time: "08:21",
+        turnId: "turn-33",
+        cat: "fluency",
+        def: "A brief summary or review of the key points from a previous meeting or lesson (short for 'recapitulation').",
+        quote: "Louie (08:21): \"So the beginning of the lesson will be a recap of the previous lesson, just to make sure we haven't missed anything.\"",
+        l1: "riepilogo / punto della situazione"
+      },
+      "delivery": {
+        word: "delivery",
+        ipa: "/dɪˈlɪv.ər.i/",
+        pos: "noun",
+        level: "C1",
+        time: "08:21",
+        turnId: "turn-33",
+        cat: "persuasion",
+        def: "The manner, style, pace, and confidence with which someone speaks or presents an idea to an audience.",
+        quote: "Louie (08:21): \"So you're looking for more structure in your delivery.\"",
+        l1: "esposizione / modo di porsi e parlare"
+      },
+      "persuade": {
+        word: "persuade",
+        ipa: "/pəˈsweɪd/",
+        pos: "verb",
+        level: "B2",
+        time: "08:21",
+        turnId: "turn-33",
+        cat: "persuasion",
+        def: "To win someone over to do or believe something through clear reasoning and compelling framing.",
+        quote: "Louie (08:21): \"Whenever you are ready, just tell me—you're trying to persuade me why I should agree.\"",
+        l1: "persuadere / convincere"
+      },
+      "supervisor": {
+        word: "supervisor",
+        ipa: "/ˈsuː.pə.vaɪ.zə(r)/",
+        pos: "noun",
+        level: "B2",
+        time: "08:21",
+        turnId: "turn-33",
+        cat: "business",
+        def: "A manager or senior colleague who oversees a team's work and has authority to approve proposals.",
+        quote: "Louie (08:21): \"Just imagine we work together. Maybe I'm a supervisor...\"",
+        l1: "supervisore / responsabile"
+      },
+      "keywords": {
+        word: "keywords",
+        ipa: "/ˈkiː.wɜːdz/",
+        pos: "noun",
+        level: "B2",
+        time: "10:53",
+        turnId: "turn-39",
+        cat: "persuasion",
+        def: "Single anchor words jotted down as memory triggers so a speaker can talk naturally without reading a script.",
+        quote: "Louie (10:53): \"If you are going to write it down, just write down two or three keywords.\"",
+        l1: "parole chiave"
+      },
+      "awareness": {
+        word: "awareness",
+        ipa: "/əˈweə.nəs/",
+        pos: "noun",
+        level: "B2",
+        time: "11:11",
+        turnId: "turn-42",
+        cat: "business",
+        def: "Conscious knowledge, mindfulness, or attention toward an important social or organizational issue.",
+        quote: "Serena (11:11): \"The awareness of employers is very important nowadays, because every consumer gives a lot of importance to this dimension.\"",
+        l1: "consapevolezza / sensibilità"
+      },
+      "dimension": {
+        word: "dimension",
+        ipa: "/daɪˈmen.ʃən/",
+        pos: "noun",
+        level: "B2",
+        time: "11:11",
+        turnId: "turn-42",
+        cat: "business",
+        def: "A particular aspect, facet, or angle of a complex situation or problem.",
+        quote: "Serena (11:11): \"...because every consumer gives a lot of importance to this dimension.\"",
+        l1: "dimensione / aspetto"
+      },
+      "welfare": {
+        word: "corporate welfare",
+        ipa: "/ˈwel.feə(r)/",
+        pos: "noun",
+        level: "C1",
+        time: "11:11",
+        turnId: "turn-42",
+        cat: "business",
+        def: "Programs, perks, and initiatives provided by a company to support the health, comfort, and well-being of its employees.",
+        quote: "Serena (11:11): \"For that, including a welfare option about giving free pizza every Wednesday lunch could give an added advantage...\"",
+        l1: "welfare aziendale / benessere dei dipendenti"
+      },
+      "reputation": {
+        word: "reputation",
+        ipa: "/ˌrep.jəˈteɪ.ʃən/",
+        pos: "noun",
+        level: "B2",
+        time: "11:11",
+        turnId: "turn-42",
+        cat: "business",
+        def: "The general opinion or standing that the public, clients, and employees hold about a company's character.",
+        quote: "Serena (11:11): \"...could give an added advantage for the reputation of the company.\"",
+        l1: "reputazione / immagine aziendale"
+      },
+      "come-across": {
+        word: "come across",
+        ipa: "/kʌm əˈkrɒs/",
+        pos: "phrasal verb",
+        level: "C1",
+        time: "12:26",
+        turnId: "turn-43",
+        cat: "persuasion",
+        def: "To make a particular impression on listeners; to be perceived or understood in a certain way.",
+        quote: "Louie (12:26): \"How did you feel that was delivered? How do you feel it came across?\"",
+        l1: "arrivare (a chi ascolta) / dare un'impressione"
+      },
+      "ascertain": {
+        word: "ascertain",
+        ipa: "/ˌæs.əˈteɪn/",
+        pos: "verb",
+        level: "C2",
+        time: "12:26",
+        turnId: "turn-43",
+        cat: "fluency",
+        def: "To find out, determine, or establish something with certainty through careful observation.",
+        quote: "Louie (12:26): \"How do you feel it came across? Okay, to ascertain...\"",
+        l1: "accertare / verificare / appurare"
+      },
+      "flow": {
+        word: "sentence flow",
+        ipa: "/fləʊ/",
+        pos: "noun",
+        level: "B2",
+        time: "12:43",
+        turnId: "turn-44",
+        cat: "fluency",
+        def: "The smooth, natural rhythm and connection from one word or idea to the next in spoken English.",
+        quote: "Serena (12:43): \"Yeah, about the flow of the sentence, because I was thinking while I was talking.\"",
+        l1: "fluidità / scorrevolezza della frase"
+      },
+      "granted": {
+        word: "granted",
+        ipa: "/ˈɡrɑːn.tɪd/",
+        pos: "adverb",
+        level: "C1",
+        time: "12:53",
+        turnId: "turn-45",
+        cat: "persuasion",
+        def: "Used to acknowledge that a point is true before introducing a more important contrasting idea ('Admittedly...').",
+        quote: "Louie (12:53): \"For example, this one is a little bit more for business, granted, but if we say in this scenario...\"",
+        l1: "certo / ammetto che / è pur vero che"
+      },
+      "feed-into": {
+        word: "feed into",
+        ipa: "/fiːd ˈɪn.tuː/",
+        pos: "phrasal verb",
+        level: "C1",
+        time: "13:57",
+        turnId: "turn-51",
+        cat: "persuasion",
+        def: "To directly appeal to, support, or satisfy someone's underlying motivation or priority.",
+        quote: "Louie (13:57): \"They feed into your... we call it the lizard brain.\"",
+        l1: "alimentare / fare leva su"
+      },
+      "lizard-brain": {
+        word: "lizard brain",
+        ipa: "/ˈlɪz.əd breɪn/",
+        pos: "idiom",
+        level: "C1",
+        time: "13:57",
+        turnId: "turn-51",
+        cat: "persuasion",
+        def: "In business persuasion, the primal, fast-reacting part of a decision-maker's mind that asks: 'How does this solve my immediate problem or protect my bottom line?'",
+        quote: "Louie (13:57): \"We call it the lizard brain. Okay? Your lizard brain thinks about what you want...\"",
+        l1: "cervello rettiliano (istinto orientato all'interesse immediato)"
+      },
+      "shallow": {
+        word: "shallow",
+        ipa: "/ˈʃæl.əʊ/",
+        pos: "adjective",
+        level: "C1",
+        time: "13:57",
+        turnId: "turn-51",
+        cat: "persuasion",
+        def: "Superficial; focused only on surface-level concerns (such as immediate cost or money) rather than deeper values.",
+        quote: "Louie (13:57): \"Maybe this is a bit silly, because money is so shallow, but money...\"",
+        l1: "superficiale / venale"
+      },
+      "macro": {
+        word: "macro (context)",
+        ipa: "/ˈmæk.rəʊ/",
+        pos: "adjective",
+        level: "C1",
+        time: "13:57",
+        turnId: "turn-51",
+        cat: "persuasion",
+        def: "Relating to the large-scale, company-wide situation or overarching operational challenge rather than an isolated detail.",
+        quote: "Louie (13:57): \"Start not just with the wellness of the staff, but thinking about the macro—the bigger picture.\"",
+        l1: "macro / quadro strategico generale"
+      },
+      "the-bigger-picture": {
+        word: "the bigger picture",
+        ipa: "/ðə ˈbɪɡ.ə ˈpɪk.tʃə(r)/",
+        pos: "idiom",
+        level: "B2",
+        time: "13:57",
+        turnId: "turn-51",
+        cat: "persuasion",
+        def: "The entire overarching situation and its long-term consequences, rather than one small detail.",
+        quote: "Louie (13:57): \"...thinking about the macro, okay? The bigger picture of what's going on in the conversation.\"",
+        l1: "il quadro generale / la visione d'insieme"
+      },
+      "keep-morale-up": {
+        word: "keep morale up",
+        ipa: "/kiːp məˈrɑːl ʌp/",
+        pos: "collocation",
+        level: "C1",
+        time: "13:57",
+        turnId: "turn-51",
+        cat: "business",
+        def: "To maintain high enthusiasm, confidence, and team spirit during a demanding or stressful period.",
+        quote: "Louie (13:57): \"A pizza party just to keep morale up on Wednesday.\"",
+        l1: "tenere alto il morale (del team)"
+      },
+      "sort-out": {
+        word: "sort out",
+        ipa: "/sɔːt aʊt/",
+        pos: "phrasal verb",
+        level: "B2",
+        time: "13:57",
+        turnId: "turn-51",
+        cat: "business",
+        def: "To organize, arrange, or resolve all practical details of something so it is ready to go.",
+        quote: "Louie (13:57): \"The good thing is, I've already sorted it out with a local pizza restaurant. So we just need your approval.\"",
+        l1: "organizzare / sistemare / definire i dettagli"
+      },
+      "reel-off": {
+        word: "reel off",
+        ipa: "/riːl ɒf/",
+        pos: "phrasal verb",
+        level: "C2",
+        time: "13:57",
+        turnId: "turn-51",
+        cat: "persuasion",
+        def: "To recite a list of facts or points quickly and mechanically without weaving them into an engaging story.",
+        quote: "Louie (13:57): \"So while you can reel off wellness and welfare advantages, you want to know what the person wants.\"",
+        l1: "snocciolare / elencare a macchinetta"
+      },
+      "implementation": {
+        word: "implementation",
+        ipa: "/ˌɪm.plɪ.menˈteɪ.ʃən/",
+        pos: "noun",
+        level: "C1",
+        time: "13:57",
+        turnId: "turn-51",
+        cat: "business",
+        def: "The practical execution of a plan or idea—showing how easily a proposal can be put into action.",
+        quote: "Louie (13:57): \"So the effect it has on the company, the solution, and the implementation.\"",
+        l1: "implementazione / messa in pratica"
+      },
+      "stakeholder": {
+        word: "stakeholder",
+        ipa: "/ˈsteɪkˌhəʊl.də(r)/",
+        pos: "noun",
+        level: "C1",
+        time: "16:53",
+        turnId: "turn-55",
+        cat: "business",
+        def: "A key decision-maker, client, or leader who has a direct interest and responsibility in the outcome of a project.",
+        quote: "Louie (16:53): \"Yes, because people are busy and people's bosses or stakeholders in this conversation really are goal-oriented.\"",
+        l1: "stakeholder / interlocutore chiave / decisore"
+      },
+      "goal-oriented": {
+        word: "goal-oriented",
+        ipa: "/ˈɡəʊl ˌɔː.ri.en.tɪd/",
+        pos: "adjective",
+        level: "C1",
+        time: "16:53",
+        turnId: "turn-55",
+        cat: "business",
+        def: "Focused primarily on achieving concrete targets, deliverables, and measurable results.",
+        quote: "Louie (16:53): \"...bosses or stakeholders in this conversation really are goal-oriented: 'What's going to help me deliver what I'm trying to deliver?'\"",
+        l1: "orientato agli obiettivi / focalizzato sui risultati"
+      },
+      "relatable": {
+        word: "relatable",
+        ipa: "/rɪˈleɪ.tə.bəl/",
+        pos: "adjective",
+        level: "C1",
+        time: "16:53",
+        turnId: "turn-55",
+        cat: "persuasion",
+        def: "Easy for another person to connect with personally because it touches their own real-world experience and priorities.",
+        quote: "Louie (16:53): \"We have to make the points that you made—the wellness and the welfare—relatable to the company.\"",
+        l1: "concreto / vicino all'esperienza di chi ascolta"
+      },
+      "implicit": {
+        word: "implicit",
+        ipa: "/ɪmˈplɪs.ɪt/",
+        pos: "adjective",
+        level: "C1",
+        time: "21:38",
+        turnId: "turn-64",
+        cat: "persuasion",
+        def: "Suggested or understood indirectly from the context without being stated directly in words.",
+        quote: "Serena (21:38): \"It's implicit, I guess—or no, it is inside the sentence because I said that Serena has to come to the office...\"",
+        l1: "implicito / sottinteso"
+      },
+      "heavy-load": {
+        word: "heavy load",
+        ipa: "/ˈhev.i ləʊd/",
+        pos: "collocation",
+        level: "B2",
+        time: "22:20",
+        turnId: "turn-65",
+        cat: "business",
+        def: "A demanding amount of work, pressure, or responsibility that a team must carry at one time.",
+        quote: "Louie (22:20): \"Hey, excuse me, we have a very heavy load on Friday.\"",
+        l1: "carico pesante / grossa mole di lavoro"
+      },
+      "crunch-time": {
+        word: "crunch time",
+        ipa: "/ˈkrʌntʃ taɪm/",
+        pos: "idiom",
+        level: "C1",
+        time: "22:20",
+        turnId: "turn-65",
+        cat: "business",
+        def: "A critical, high-pressure period just before a major deadline when a team must work intensely to finish on time.",
+        quote: "Louie (22:20): \"We won't be able to take breaks. We have crunch time. Do you know what crunch time is?\"",
+        l1: "fase critica / sprint finale prima di una scadenza"
+      },
+      "work-flat-out": {
+        word: "work flat out",
+        ipa: "/wɜːk flæt aʊt/",
+        pos: "idiom",
+        level: "C1",
+        time: "22:42",
+        turnId: "turn-67",
+        cat: "business",
+        def: "To work as fast, hard, and intensely as possible with maximum effort and energy.",
+        quote: "Louie (22:42): \"Crunch time is very common in tech companies where everyone is just working flat out.\"",
+        l1: "lavorare a pieno ritmo / lavorare senza sosta"
+      },
+      "improvisation": {
+        word: "improvisation (improv)",
+        ipa: "/ˌɪm.prə.vaɪˈzeɪ.ʃən/",
+        pos: "noun",
+        level: "B2",
+        time: "22:42",
+        turnId: "turn-67",
+        cat: "persuasion",
+        def: "Inventing realistic context or story details spontaneously in the moment to make an argument more vivid.",
+        quote: "Louie (22:42): \"So obviously, there's a little bit of improv here, right? Improvisation here, granted...\"",
+        l1: "improvvisazione"
+      },
+      "workload": {
+        word: "workload",
+        ipa: "/ˈwɜːk.ləʊd/",
+        pos: "noun",
+        level: "B2",
+        time: "22:42",
+        turnId: "turn-67",
+        cat: "business",
+        def: "The total amount of work to be completed by a person, team, or department within a given period (a sharp C1 upgrade over saying 'stuff to do').",
+        quote: "Louie (22:42): \"Look, we have this huge workload on Friday. Huge workload.\"",
+        l1: "carico di lavoro / mole di lavoro"
+      },
+      "split-hairs": {
+        word: "split hairs",
+        ipa: "/splɪt heəz/",
+        pos: "idiom",
+        level: "C2",
+        time: "24:41",
+        turnId: "turn-71",
+        cat: "persuasion",
+        def: "To focus on or argue about very small, fine distinctions that may seem overly detailed.",
+        quote: "Louie (24:41): \"Yeah, I'm probably splitting hairs here, but very good though—it sounded more coherent.\"",
+        l1: "spaccare il capello in quattro / sottilizzare"
+      },
+      "coherent": {
+        word: "coherent",
+        ipa: "/kəʊˈhɪə.rənt/",
+        pos: "adjective",
+        level: "C1",
+        time: "24:41",
+        turnId: "turn-71",
+        cat: "fluency",
+        def: "Logical, well-structured, and easy for a listener to follow because all parts fit together smoothly.",
+        quote: "Louie (24:41): \"Very good though—it sounded more coherent. It sounded more like a story...\"",
+        l1: "coerente / logico e ben articolato"
+      },
+      "enthusiasm": {
+        word: "enthusiasm",
+        ipa: "/ɪnˈθjuː.zi.æz.əm/",
+        pos: "noun",
+        level: "B2",
+        time: "24:41",
+        turnId: "turn-71",
+        cat: "persuasion",
+        def: "Warm engagement, interest, and positive energy shown by a listener when an idea is told as a story.",
+        quote: "Louie (24:41): \"When you engage in a story, the listener is going to receive it with more enthusiasm.\"",
+        l1: "entusiasmo / interesse attivo"
+      },
+      "impart": {
+        word: "impart",
+        ipa: "/ɪmˈpɑːt/",
+        pos: "verb",
+        level: "C2",
+        time: "25:51",
+        turnId: "turn-75",
+        cat: "fluency",
+        def: "To pass on, communicate, or share valuable knowledge, wisdom, or practical skill with someone.",
+        quote: "Louie (25:51): \"I am sorry that in 25 minutes there's quite a lot to try and explain and to impart something on you as well...\"",
+        l1: "trasmettere / comunicare (conoscenze o competenze)"
+      },
+      "progressive": {
+        word: "progressive",
+        ipa: "/prəˈɡres.ɪv/",
+        pos: "adjective",
+        level: "B2",
+        time: "29:19",
+        turnId: "turn-88",
+        cat: "culture",
+        def: "Forward-thinking, modern, and open to new social ideas, diversity, and innovation.",
+        quote: "Serena (29:19): \"I think it is a nice country to visit, to live in—it's a very progressive country for some reason.\"",
+        l1: "progressista / all'avanguardia"
+      },
+      "commonwealth": {
+        word: "the Commonwealth",
+        ipa: "/ˈkɒm.ən.welθ/",
+        pos: "noun",
+        level: "C1",
+        time: "29:41",
+        turnId: "turn-89",
+        cat: "culture",
+        def: "An international association of 56 independent nations (including the UK, Australia, Canada, and Caribbean states) that share historical ties and shape Britain's multicultural society.",
+        quote: "Louie (29:41): \"Yeah, I think it's the Commonwealth—we have lots of people coming around.\"",
+        l1: "il Commonwealth (comunità di nazioni storicamente legate al Regno Unito)"
+      }
+    };
+
+    // Helper functions for inline transcript markup (Rule 2: Defensive fallback)
+    function v(key, displayWord) {
+      const item = (typeof VOCAB_DB !== 'undefined' && VOCAB_DB[key]) ? VOCAB_DB[key] : null;
+      const label = displayWord || (item ? item.word : key);
+      return `<span class="vocab-mark" data-vkey="${key}" onclick="inspectVocab('${key}')">${label}</span>`;
+    }
+    function fixBadge(corrected, rawMistake) {
+      return `<span class="asr-fix-pill" title="Note-taker misheard '${corrected}' as '${rawMistake}'">✨ Fixed: "${corrected}" <span class="text-stone-400">(note-taker wrote: "${rawMistake}")</span></span>`;
+    }
+
+    // 2. Full Cleaned Transcript Turns (00:00 to 30:50 — All 96 consolidated turns / 100% of raw transcript)
+    const TRANSCRIPT_TURNS = [
+      {
+        id: "turn-1",
+        chapterId: "chap-1",
+        chapterTitle: "Chapter I • Warm Welcome, Ear Inflammation & Tinnitus (00:00 – 01:10)",
+        speaker: "Louie",
+        time: "00:00",
+        html: `Hi, Serena. How are you? One second—sorry, I'm just going to change my speakers.`
+      },
+      {
+        id: "turn-2",
+        speaker: "Serena",
+        time: "00:08",
+        html: `Okay.`
+      },
+      {
+        id: "turn-3",
+        speaker: "Louie",
+        time: "00:09",
+        html: `Do you hear me well?`
+      },
+      {
+        id: "turn-4",
+        speaker: "Serena",
+        time: "00:10",
+        html: `Yeah, I can hear you well.`
+      },
+      {
+        id: "turn-5",
+        speaker: "Louie",
+        time: "00:13",
+        html: `Good. And how are you today?`
+      },
+      {
+        id: "turn-6",
+        speaker: "Serena",
+        time: "00:15",
+        html: `Fine, so-so. I'm having an ear ${v("inflammation", "inflammation")} ${fixBadge("ear inflammation", "hearing inflammation")}, I guess, so actually I have been experiencing for one week a ${v("tinnitus", "continuous whistle")} in my ear. So it's becoming very exhausting, but hopefully I'm going to a ${v("specialist", "specialist")} this afternoon, so I hope I will have a good ${v("therapy", "therapy")} for that.`
+      },
+      {
+        id: "turn-7",
+        speaker: "Louie",
+        time: "00:56",
+        html: `I'm sorry that you've had it...`,
+      },
+      {
+        id: "turn-8",
+        speaker: "Serena",
+        time: "00:57",
+        html: `Yeah, but...`
+      },
+      {
+        id: "turn-9",
+        speaker: "Louie",
+        time: "00:57",
+        html: `...for a week. That's not nice at all.`
+      },
+      {
+        id: "turn-10",
+        speaker: "Serena",
+        time: "01:00",
+        html: `Talking—I found that talking helps me avoid thinking about this whistle.`
+      },
+      {
+        id: "turn-11",
+        chapterId: "chap-2",
+        chapterTitle: "Chapter II • Two Years on Preply, Corporate Sponsorship & Moving to Structured English (01:10 – 04:06)",
+        speaker: "Louie",
+        time: "01:10",
+        html: `Okay. So, thank you very much for taking the time today, then, Serena. Thank you very much. I went through your learning needs earlier today, but I would love to know from yourself, in your own words, why we are here today.`
+      },
+      {
+        id: "turn-12",
+        speaker: "Serena",
+        time: "01:26",
+        html: `Yeah, well, I've been learning on Preply for two years. This upcoming year—which for me starts from September, like an academic year—I decided to change my tutor because I wanted to ${v("take-a-step-up", "take a step up")} in my English level. I've been practicing ${v("conversational", "conversational")} English. Now my goal is to change a little bit, moving from ${fixBadge("conversational English", "a conversation now English")} to a more ${v("structured", "structured")} English—always using conversation, but simply having a higher level of vocabulary, ${v("formulation", "formulation")} of sentences, and that kind of thing.`
+      },
+      {
+        id: "turn-13",
+        speaker: "Louie",
+        time: "02:56",
+        html: `Okay, very good, and I completely understand. I just have a few questions. How much English do you speak in your ${v("day-to-day", "day-to-day")}? How much English do you speak?`
+      },
+      {
+        id: "turn-14",
+        speaker: "Serena",
+        time: "03:07",
+        html: `Um, I usually only ${fixBadge("Um, I usually only", "I'm UMI am. I usually. I, o only")} do my English lesson once a week. So I don't use English at my work because I'm a ${v("consultant", "consultant")} and I work for Italy—I'm Italian. So I don't have the ${v("necessity", "necessity")} to speak in English. This is my personal and professional goal: to improve my English. And my...`
+      },
+      {
+        id: "turn-15",
+        speaker: "Louie",
+        time: "03:42",
+        html: `Okay...`
+      },
+      {
+        id: "turn-16",
+        speaker: "Serena",
+        time: "03:42",
+        html: `...company pays for my lesson. So...`
+      },
+      {
+        id: "turn-17",
+        speaker: "Louie",
+        time: "03:48",
+        html: `Lovely, that's a lovely ${v("perk", "perk")}, right? A lovely perk—that they pay for Preply ${fixBadge("That they pay for Preply", "The paper property")} is absolutely amazing. So you don't have that many opportunities to speak English.`
+      },
+      {
+        id: "turn-18",
+        speaker: "Serena",
+        time: "04:02",
+        html: `Not outside the Preply platform ${fixBadge("Not outside the Preply platform", "Not our side. The pre platform")}.`
+      },
+      {
+        id: "turn-19",
+        chapterId: "chap-3",
+        chapterTitle: "Chapter III • Inside Your Interactive Note-Taking Sanctuary: Vocabulary vs. Vernacular (04:06 – 09:50)",
+        speaker: "Louie",
+        time: "04:06",
+        html: `Okay. So if I may, I would like to show you how I teach, because we have 25 minutes today. So I think the smartest way is to show you how the lesson works. Okay? The number one thing is the note-taking. I'm going to show you how I take notes for us so that when you review the lesson, you can see how it works for you. I'm going to show you a demo of notes that are taken every lesson. Let me bring that up now—here we go. So it's very important for me to say that I do not record the lessons. However, it's being ${v("transcribe", "transcribed")} right now.`
+      },
+      {
+        id: "turn-20",
+        speaker: "Serena",
+        time: "05:06",
+        html: `Okay.`
+      },
+      {
+        id: "turn-21",
+        speaker: "Louie",
+        time: "05:06",
+        html: `Okay, it's being transcribed. So you will get this document at the end of each day because, for example, I have another lesson after this one. This is the transcript that I make for you at the end of every day that you'll receive. As you see, it has the transcript of us talking, and I always try to upgrade your language, vocabulary, and ${v("vernacular", "vernacular")} in conversation. Do you know the difference between vocabulary and vernacular?`
+      },
+      {
+        id: "turn-22",
+        speaker: "Serena",
+        time: "05:45",
+        html: `Sorry—vocabulary and... I don't know ${fixBadge("vocabulary and... I don't know", "Poocabulary and, du't. I don't know")}.`
+      },
+      {
+        id: "turn-23",
+        speaker: "Louie",
+        time: "05:56",
+        html: `So vocabulary is the words you...`
+      },
+      {
+        id: "turn-24",
+        speaker: "Serena",
+        time: "05:58",
+        html: `Okay.`
+      },
+      {
+        id: "turn-25",
+        speaker: "Louie",
+        time: "05:58",
+        html: `...know. And vernacular is the words you use. So we're always trying to upgrade the words you use. Whenever you want to review the notes or the lesson, as you can see, you can go through the whole conversation. If you put your mouse over a word which we target in the lesson, it will give you the translation. This demo student I think is in Spanish, okay, but it will be in Italian for you. Let me increase that—it will give you the level of the word, when it was said, and how to pronounce it as well. So you can go through the lesson at the end or whenever you'd like, and you can see where we used this word or that word. Why do I do this? It's so that you don't have to worry about notes as much in the moment, so we can really concentrate on the lesson. I try to ${v("take-the-burden-off", "take the burden off")} you. Now, if you don't want to go through the transcript, there's just a dictionary of the words we used. Throughout the lesson, any additional work will be put here. You do not get lots of documents—you don't get a document a day—because it's a website. I update it for you every day, and then you'll receive it. So you only have the one URL, and you just refresh it and it will have every single...`
+      },
+      {
+        id: "turn-26",
+        speaker: "Serena",
+        time: "07:42",
+        html: `Okay.`
+      },
+      {
+        id: "turn-27",
+        speaker: "Louie",
+        time: "07:42",
+        html: `...session inside, and anything else. So whatever we say will come up and it's stored for us in the lessons. Do you have any questions about that at all?`
+      },
+      {
+        id: "turn-28",
+        speaker: "Serena",
+        time: "07:58",
+        html: `No, it seems very similar to the feedback—probably the feedback that Preply gives, but more advanced ${fixBadge("Preply gives, but more advanced", "pre-live gives more advanced")}...`
+      },
+      {
+        id: "turn-29",
+        speaker: "Louie",
+        time: "08:12",
+        html: `Yeah, exactly.`
+      },
+      {
+        id: "turn-30",
+        speaker: "Serena",
+        time: "08:12",
+        html: `...and interactive.`
+      },
+      {
+        id: "turn-31",
+        speaker: "Louie",
+        time: "08:13",
+        html: `A little bit more ${v("tailored", "tailored")} to the sessions because you can speak directly to the notes. Exactly.`
+      },
+      {
+        id: "turn-32",
+        speaker: "Serena",
+        time: "08:21",
+        html: `Okay.`
+      },
+      {
+        id: "turn-33",
+        chapterId: "chap-4",
+        chapterTitle: "Chapter IV • Persuasive Pitch Lab #1: 'Free Staff Pizza on Wednesdays' & The Macro Framework (08:21 – 18:53)",
+        speaker: "Louie",
+        time: "08:21",
+        html: `Yes. Okay, the next part is error correction. At the beginning of every lesson, I will go through our last session and I will bring up if we missed anything—any error corrections or any sentence structure improvements. So the beginning of the lesson will be a ${v("recap", "recap")} of the previous lesson, just to make sure we haven't missed anything and really to fix specific patterns. That's how we would normally start. Now, let's look at exercises. You're looking for more structure in your ${v("delivery", "delivery")}. For example, I've already noticed something in your speech today. I'm going to ask you to sell me something—not a product, but an idea. This is going to be a very normal, easy thing. Just imagine we work together. Maybe I'm a ${v("supervisor", "supervisor")}, and I would like you to try to sell me the idea that on Wednesdays we should have free staff pizza. Free staff pizza on Wednesdays. Take a moment, and whenever you are ready, you're trying to ${v("persuade", "persuade")} me why I should agree.`
+      },
+      {
+        id: "turn-34",
+        speaker: "Serena",
+        time: "10:15",
+        html: `Are you someone in particular, or just somebody from my company?`
+      },
+      {
+        id: "turn-35",
+        speaker: "Louie",
+        time: "10:28",
+        html: `Probably someone that can agree to this—maybe an accountant or a supervisor. Someone that can make this happen.`
+      },
+      {
+        id: "turn-36",
+        speaker: "Serena",
+        time: "10:41",
+        html: `Okay.`
+      },
+      {
+        id: "turn-37",
+        speaker: "Louie",
+        time: "10:43",
+        html: `Yes.`
+      },
+      {
+        id: "turn-38",
+        speaker: "Serena",
+        time: "10:44",
+        html: `So, I am going to write down...`
+      },
+      {
+        id: "turn-39",
+        speaker: "Louie",
+        time: "10:53",
+        html: `I would say if you are going to write it down, just write down two or three ${v("keywords", "keywords")}—try to write down just two or three keywords.`
+      },
+      {
+        id: "turn-40",
+        speaker: "Serena",
+        time: "11:01",
+        html: `Okay, will I say them to you?`
+      },
+      {
+        id: "turn-41",
+        speaker: "Louie",
+        time: "11:06",
+        html: `Yes, I would say it first. Yeah.`
+      },
+      {
+        id: "turn-42",
+        speaker: "Serena",
+        time: "11:11",
+        html: `Okay, so I will say three keywords. The ${v("awareness", "awareness")} of employers is very important nowadays, because every consumer gives a lot of importance to this ${v("dimension", "dimension")}. For that reason, including a ${v("welfare", "welfare")} option—the option of giving free pizza every Wednesday lunch ${fixBadge("every Wednesday lunch could give an added advantage", "every Wednesday launch could give an ad advantage")}—could give an added advantage for the ${v("reputation", "reputation")} of the company.`
+      },
+      {
+        id: "turn-43",
+        speaker: "Louie",
+        time: "12:26",
+        html: `Okay, very good. So how did you feel that was delivered? How do you feel it ${v("come-across", "came across")}? Just to ${v("ascertain", "ascertain")}...`
+      },
+      {
+        id: "turn-44",
+        speaker: "Serena",
+        time: "12:43",
+        html: `Yeah—about the ${v("flow", "flow")} of the sentence, because I was thinking while I was talking.`
+      },
+      {
+        id: "turn-45",
+        speaker: "Louie",
+        time: "12:53",
+        html: `So here is how I will help you with structure: not just grammar structure and how to say each sentence, but how to structure a conversation. We will learn conversation structure. For example, this scenario is a little bit more for business, ${v("granted", "granted")}, but when you want to persuade someone, you have to think: "What do I want? And what does Louie want?" You have to use a little bit of imagination. Maybe I'm your boss. Why would I care in your company...?`
+      },
+      {
+        id: "turn-46",
+        speaker: "Serena",
+        time: "13:37",
+        html: `Yeah.`
+      },
+      {
+        id: "turn-47",
+        speaker: "Louie",
+        time: "13:37",
+        html: `In your team, do you like it when people come to you with solutions?`
+      },
+      {
+        id: "turn-48",
+        speaker: "Serena",
+        time: "13:47",
+        html: `Yes, surely it's a nice way to... yeah...`
+      },
+      {
+        id: "turn-49",
+        speaker: "Louie",
+        time: "13:54",
+        html: `Yeah.`
+      },
+      {
+        id: "turn-50",
+        speaker: "Serena",
+        time: "13:54",
+        html: `...to interact ${fixBadge("To interact / constructive", "To contract")}.`
+      },
+      {
+        id: "turn-51",
+        speaker: "Louie",
+        time: "13:57",
+        html: `So when you have a very good staff member, they ${v("feed-into", "feed into")} what we call the ${v("lizard-brain", "lizard brain")}. Your lizard brain thinks about what you immediately care about. Imagine I'm your supervisor and I really care about money—maybe that sounds a bit silly because money is so ${v("shallow", "shallow")}, but money and output matter to a boss. So instead of starting with just the general wellness of the staff, start by thinking about the ${v("macro", "macro")}—${v("the-bigger-picture", "the bigger picture")} of what's going on in the company: "Hey, Louie, next week we have all those orders coming in. We're going to be so much busier than normal, and we haven't got more staff ${fixBadge("haven't got more staff", "haven't got more stuff")}. I'm a bit worried about the wellness of the team, but I've got a solution: a pizza party just to ${v("keep-morale-up", "keep morale up")} on Wednesday. The good thing is, I've already ${v("sort-out", "sorted it out")} with a local pizza restaurant, so we just need your approval." While you can ${v("reel-off", "reel off")} abstract wellness and welfare advantages, you want to connect to what the decision-maker actually needs. I used to have a marketing team, and they were fantastic at getting me to take them to lunch all the time. I'd say, "Ladies, I can't take you to lunch today," and they would say, "No, Louie, we're going to this place because there could be a huge client for us there!" So let's structure it into 4 steps: 1) The Macro Problem (what's going on in the company), 2) The Effect it has on the company, 3) The Solution, and 4) The ${v("implementation", "Implementation")}. We want to show the big picture to the person we're trying to convince.`
+      },
+      {
+        id: "turn-52",
+        speaker: "Serena",
+        time: "16:44",
+        html: `Okay, so a wider description of the context.`
+      },
+      {
+        id: "turn-53",
+        speaker: "Louie",
+        time: "16:52",
+        html: `Exactly.`
+      },
+      {
+        id: "turn-54",
+        speaker: "Serena",
+        time: "16:52",
+        html: `Okay.`
+      },
+      {
+        id: "turn-55",
+        speaker: "Louie",
+        time: "16:53",
+        html: `Yes, because people are busy, and bosses or ${v("stakeholder", "stakeholders")} in this conversation really are ${v("goal-oriented", "goal-oriented")}: "What's going to help me deliver what I'm trying to deliver?" So we want to speak to that part of the person. This is a presentation method, to be fair, but it gives us great structure in answering. It's lovely to hear because it involves the listener more in your response. In your first try, you were listing points off, which doesn't affect me as a boss as much. We have to make the points you made—wellness and welfare—${v("relatable", "relatable")} to the company or the listener. Do you have any questions about that at all?`
+      },
+      {
+        id: "turn-56",
+        speaker: "Serena",
+        time: "18:14",
+        html: `It is clear. I was thinking that I tried to give context ${fixBadge("I tried to give context", "the TED to give context")} anyway while I was saying that wellness is important for consumers nowadays—it is very general. I didn't think about a specific company context, but yeah, this framework could be very useful.`
+      },
+      {
+        id: "turn-57",
+        chapterId: "chap-5",
+        chapterTitle: "Chapter V • Persuasive Pitch Lab #2: 'Puppy Friday', Crunch Time & Story vs. List (18:53 – 26:58)",
+        speaker: "Louie",
+        time: "18:53",
+        html: `May I give you another scenario, if that's okay?`
+      },
+      {
+        id: "turn-58",
+        speaker: "Serena",
+        time: "19:01",
+        html: `Okay, no problem. Yeah.`
+      },
+      {
+        id: "turn-59",
+        speaker: "Louie",
+        time: "19:01",
+        html: `Great, so then you can try to use this structure here. Today I had three students preparing for interviews, and they were quite unaware of their delivery. For example, when you don't have a clear structure, you hesitate more. With this 4-step structure, you will drastically notice less hesitation, and it will make your delivery sound much smoother. So if I may, here is your next goal—sorry for these silly terms ${fixBadge("silly terms", "city terms")}—but "Puppy Friday": bring your puppy to work on Friday. Do you have any pets?`
+      },
+      {
+        id: "turn-60",
+        speaker: "Serena",
+        time: "20:15",
+        html: `Okay. I work with my team, and we're going to work at the office on Friday because we have some stuff to do. But Serena told me that she isn't able to come because she has to take care of her puppy at home. So it could be a good idea if she can bring her puppy to the office.`
+      },
+      {
+        id: "turn-61",
+        speaker: "Louie",
+        time: "21:19",
+        html: `Yeah, okay, so that's much better! Just one piece of feedback: it wasn't quite macro enough. For example, you didn't include how it would directly affect the boss's goal.`
+      },
+      {
+        id: "turn-62",
+        speaker: "Serena",
+        time: "21:37",
+        html: `But it...`
+      },
+      {
+        id: "turn-63",
+        speaker: "Louie",
+        time: "21:37",
+        html: `So for example...`
+      },
+      {
+        id: "turn-64",
+        speaker: "Serena",
+        time: "21:38",
+        html: `It's ${v("implicit", "implicit")}, I guess—or no, it is inside the sentence ${fixBadge("It's implicit, I guess—or no, it is inside the sentence", "Please it I guess or no it's it is insider the sentence")} because I said that Serena has to come to the office, but she isn't able to come, so the effect could be that Serena will not come into the office for this reason. I don't know.`
+      },
+      {
+        id: "turn-65",
+        speaker: "Louie",
+        time: "22:20",
+        html: `I see what you mean, but let's make it even more macro for the whole team: "Hey, excuse me, we have a very ${v("heavy-load", "heavy load")} on Friday. I don't think the staff will even be able to take breaks. We have ${v("crunch-time", "crunch time")}." Do you know what crunch time is?`
+      },
+      {
+        id: "turn-66",
+        speaker: "Serena",
+        time: "22:41",
+        html: `No.`
+      },
+      {
+        id: "turn-67",
+        speaker: "Louie",
+        time: "22:42",
+        html: `Crunch time is very common in tech and consulting companies where everyone is just ${v("work-flat-out", "working flat out")}. In my old company where I used to work, we used to have crunch time where we had to work flat out for two or three months—12 to 15 hours a day, whatever it took to get the project done on time. So we needed to keep morale up and keep everyone happy. Obviously, there's a little bit of ${v("improvisation", "improvisation")} here, granted, but we could say: "Look, we have this huge ${v("workload", "workload")} on Friday. To keep everyone happy while the staff are working so hard, why don't we have 'Bring Your Puppy to Work Friday'? Anyone can bring their dog in. It will create a warm atmosphere, which means we'll be able to hit our deadline, and it's completely free because they already have their dogs." Notice how that reason is much more macro: if one person has a personal dog-sitting problem, she can talk to HR individually, whereas framing it around team morale during crunch time relates the benefit to the whole company.`
+      },
+      {
+        id: "turn-68",
+        speaker: "Serena",
+        time: "24:27",
+        html: `Yeah. Probably...`
+      },
+      {
+        id: "turn-69",
+        speaker: "Louie",
+        time: "24:29",
+        html: `Okay?`
+      },
+      {
+        id: "turn-70",
+        speaker: "Serena",
+        time: "24:29",
+        html: `...my example referred to a single team member's problem—not so macro, but related to one person.`
+      },
+      {
+        id: "turn-71",
+        speaker: "Louie",
+        time: "24:41",
+        html: `Yeah, and I'm probably ${v("split-hairs", "splitting hairs")} here, because your second pitch was very good—it sounded much more ${v("coherent", "coherent")}! It sounded more like a story, and it was much nicer to listen to. People love to hear a story much more than a list. In your first example, it was a list, where a listener just thinks, "Okay." But when you engage people with a story, the listener receives it with far more ${v("enthusiasm", "enthusiasm")}. Now, one vocabulary upgrade before anything else: you said "we have some stuff to do." Instead of "stuff," you can say "we have a big workload" or...`
+      },
+      {
+        id: "turn-72",
+        speaker: "Serena",
+        time: "25:35",
+        html: `Yeah—or "tasks"?`
+      },
+      {
+        id: "turn-73",
+        speaker: "Louie",
+        time: "25:36",
+        html: `A big workload, or "we have a lot of tasks"—exactly! Good, "we have a lot of tasks." Do you have any questions about this?`
+      },
+      {
+        id: "turn-74",
+        speaker: "Serena",
+        time: "25:48",
+        html: `No, none right now ${fixBadge("No, none right now", "No, Nei")}.`
+      },
+      {
+        id: "turn-75",
+        speaker: "Louie",
+        time: "25:51",
+        html: `I have to say, if you download your audio after the lesson and play it back, you'll immediately hear the difference in how your second pitch sounds. This technique is great for presentations, and we have structures like this for all different kinds of conversations. When you have a clear structure, you sound more coherent and it's much easier to get your idea across. As we go on, we will focus on both sentence structure and scenario structure. I'm sorry that in 25 minutes there's quite a lot to explain and to ${v("impart", "impart")} to you, but do you have any questions at all?`
+      },
+      {
+        id: "turn-76",
+        speaker: "Serena",
+        time: "26:58",
+        html: `No, it's all clear.`
+      },
+      {
+        id: "turn-77",
+        chapterId: "chap-6",
+        chapterTitle: "Chapter VI • Ear Specialist Visit, Recovery, Visiting London & The Commonwealth (27:03 – 30:50)",
+        speaker: "Louie",
+        time: "27:03",
+        html: `Cool. So what have you got planned for the rest of your day?`
+      },
+      {
+        id: "turn-78",
+        speaker: "Serena",
+        time: "27:06",
+        html: `I'm going to the ear specialist ${fixBadge("ear specialist", "here specialist")}. Yeah, for the whistle.`
+      },
+      {
+        id: "turn-79",
+        speaker: "Louie",
+        time: "27:16",
+        html: `I actually had an ear infection...`
+      },
+      {
+        id: "turn-80",
+        speaker: "Serena",
+        time: "27:18",
+        html: `Oh...`
+      },
+      {
+        id: "turn-81",
+        speaker: "Louie",
+        time: "27:18",
+        html: `...this week! I had one ear infection, it went away, and then it went into the other ear. Is that what you have, or is it something else?`
+      },
+      {
+        id: "turn-82",
+        speaker: "Serena",
+        time: "27:29",
+        html: `Yeah, it started in the right ear and continued to the left one, but with the medicine, fortunately it started reducing ${fixBadge("right ear... fortunately it started reducing", "right here... the a fortunly starts reducing")}, so right now I'm having a problem only with the right ear—though probably they are connected in some way.`
+      },
+      {
+        id: "turn-83",
+        speaker: "Louie",
+        time: "28:03",
+        html: `Yeah, for sure. And have you been eating well?`
+      },
+      {
+        id: "turn-84",
+        speaker: "Serena",
+        time: "28:13",
+        html: `Yeah, the only problem I'm experiencing is the earache connected to the hearing, the continuous whistle ${fixBadge("earache connected to the hearing, the continuous whistle", "heritage that belongs to the hearing, the continuous window")}, and the pressure, because it affects how you regulate the internal pressure inside the ear. But hopefully, I will get the optimal therapy.`
+      },
+      {
+        id: "turn-85",
+        speaker: "Louie",
+        time: "28:44",
+        html: `Just one other question: have you ever been to England?`
+      },
+      {
+        id: "turn-86",
+        speaker: "Serena",
+        time: "28:49",
+        html: `Yeah, I was there in 2015—in London. I was there only for a week visiting London, but...`
+      },
+      {
+        id: "turn-87",
+        speaker: "Louie",
+        time: "29:13",
+        html: `Nice. What did you think about England? Did you enjoy your stay there?`
+      },
+      {
+        id: "turn-88",
+        speaker: "Serena",
+        time: "29:19",
+        html: `I think it is a nice country to visit and to live in—it's a very ${v("progressive", "progressive")} country.`
+      },
+      {
+        id: "turn-89",
+        speaker: "Louie",
+        time: "29:41",
+        html: `Yeah, I think it's ${v("commonwealth", "the Commonwealth")}—we have lots of people coming from all around the world. I'm in Vietnam right now, near the Chinese border today, which is really cool, though I moved to the Caribbean during COVID to an old British territory. So I think it has that Hong Kong or Australia kind of cultural mixing.`
+      },
+      {
+        id: "turn-90",
+        speaker: "Serena",
+        time: "30:17",
+        html: `Okay!`
+      },
+      {
+        id: "turn-91",
+        speaker: "Louie",
+        time: "30:18",
+        html: `Thank you very much, Serena, thank you very much for your time. I really hope your ear gets better, because I bet it's very annoying. I will send you over your sample website later today so you can see how it works. Enjoy the rest of your day!`
+      },
+      {
+        id: "turn-92",
+        speaker: "Serena",
+        time: "30:50",
+        html: `Thank you!`
+      },
+      {
+        id: "turn-93",
+        speaker: "Louie",
+        time: "30:50",
+        html: `Thank you. Ciao! ${fixBadge("Ciao!", "Ch.")}`
+      }
+    ];
+
+    //Verify turnId references in VOCAB_DB match exact turn IDs in TRANSCRIPT_TURNS
+    // (Mapped below in post-check)
+
+    // 3. Student's Natural Strengths (6 items to build confidence)
+    const STUDENT_STRENGTHS = [
+      {
+        time: "01:00",
+        phrase: "\"Talking helps me avoid thinking about this whistle.\"",
+        note: "Warm, self-aware reflection using 'helps me + verb' to explain how conversation takes your mind off tinnitus."
+      },
+      {
+        time: "01:26",
+        phrase: "\"I wanted to take a step up in my English level.\"",
+        note: "Spot-on idiomatic phrasal expression ('take a step up') for moving from casual chat to structured professional fluency."
+      },
+      {
+        time: "03:07",
+        phrase: "\"This is my personal and professional goal—and my company pays for my lesson.\"",
+        note: "Clear, confident articulation of your intrinsic motivation paired with your company's sponsorship perk."
+      },
+      {
+        time: "11:11",
+        phrase: "\"Every consumer gives a lot of importance to this dimension... including a welfare option.\"",
+        note: "High-level C1 consulting vocabulary ('dimension', 'corporate welfare', 'company reputation') deployed on the spot."
+      },
+      {
+        time: "16:44",
+        phrase: "\"Okay, so a wider description of the context.\"",
+        note: "Instant conceptual synthesis—summarizing Louie's entire macro-persuasion framework in six crisp words."
+      },
+      {
+        time: "20:15",
+        phrase: "\"She isn't able to come because she has to take care of her puppy at home.\"",
+        note: "Immediate shift in Pitch #2 from listing abstract points to telling a coherent, human story."
+      }
+    ];
+
+    // 4. Gentle Phrasing Refinements (6 supportive Italian-to-English upgrades)
+    const GENTLE_POLISHES = [
+      {
+        time: "00:15",
+        topic: "Duration: 'For a Week' vs. 'Since One Week'",
+        said: "I have been experiencing since one week a continuous whistle in my ear. So it's becoming very struggling.",
+        natural: "I've been experiencing a continuous ringing (tinnitus) in my ear for a week, so it's becoming really exhausting.",
+        why: "In Italian, 'da una settimana' uses 'da' for durations. In English, use 'for' + duration ('for a week', 'for two years') and 'since' + starting point ('since last Wednesday', 'since September'). Also, people struggle, whereas situations are exhausting, draining, or tough."
+      },
+      {
+        time: "01:00",
+        topic: "Helping Verbs & Idiom: 'Take My Mind Off It'",
+        said: "Talking helps me in avoiding about avoiding thinking about this whistle.",
+        natural: "Talking helps me avoid thinking about this ringing — it takes my mind off it.",
+        why: "After 'help (someone)', use the bare verb without 'in' ('helps me avoid'). Even better, native speakers love the idiom 'it takes my mind off it' (mi distrae / non mi fa pensare al fischio)."
+      },
+      {
+        time: "01:26",
+        topic: "Transitioning Levels: 'Move From X to Y'",
+        said: "I've been learning on Preply since two years... My goal is to change from passing through conversational English to a more structured English.",
+        natural: "I've been learning on Preply for two years... My goal is to move beyond conversational English to more structured, articulate English.",
+        why: "Italian 'passare da... a...' often translates literally as 'pass through/from', whereas natural English uses 'move from X to Y', 'transition from X to Y', or 'move beyond X'."
+      },
+      {
+        time: "11:11",
+        topic: "Corporate Vocabulary: 'Employee Well-Being' vs. 'Employers'",
+        said: "The awareness of employers is very important nowadays... giving free pizza every Wednesday launch could give an ad advantage.",
+        natural: "Employee well-being is a top priority nowadays... offering free pizza every Wednesday at lunchtime would boost our company's reputation.",
+        why: "Remember the contrast: 'employers' = datori di lavoro, while 'employees' = dipendenti. In consulting and HR English, 'benessere aziendale' is naturally expressed as 'employee well-being' or 'workplace wellness'."
+      },
+      {
+        time: "12:43",
+        topic: "Fluency Nuance: 'The Flow of My Sentences' & 'Thinking on My Feet'",
+        said: "About the flowing of the sentence. Because I was thinking while I was talking.",
+        natural: "I was conscious of the flow of my sentences, because I was thinking on my feet while speaking.",
+        why: "Use the noun 'flow' ('the flow of my sentences' or 'how my sentences flowed'). For 'pensare sul momento mentre si parla', the C1 idiom 'thinking on my feet' is gold."
+      },
+      {
+        time: "20:15",
+        topic: "Vernacular Upgrade: Replacing 'Some Stuff to Do'",
+        said: "We're going to work at the office on Friday because we have some stuff to do.",
+        natural: "We're coming into the office on Friday because we have a heavy workload / a lot of key tasks to complete.",
+        why: "As Louie highlighted at 25:15, upgrading vague fillers like 'stuff' to 'a heavy workload', 'a lot of tasks', or 'key deliverables' immediately elevates your professional authority."
+      }
+    ];
+
+    // 5. Automated Note-Taker Spelling Fixes (16 items)
+    const ASR_FIXES = [
+      {
+        time: "00:15",
+        speaker: "Serena",
+        wrong: "I'm having a an, hearing inflammation",
+        right: "I'm having an ear inflammation",
+        note: "The automated note-taker blended 'ear' and 'hearing' into 'hearing inflammation'."
+      },
+      {
+        time: "01:26",
+        speaker: "Serena",
+        wrong: "from sorry, a conversation now English",
+        right: "from conversational English",
+        note: "Classic speech-to-text split: 'conversational' was broken into 'conversation now'."
+      },
+      {
+        time: "03:07",
+        speaker: "Serena",
+        wrong: "I'm UMI am. I usually. I, o only",
+        right: "Um, I usually only...",
+        note: "The ASR transcribed a gentle thinking pause ('Um, I...') as the acronym 'UMI'."
+      },
+      {
+        time: "03:48",
+        speaker: "Louie",
+        wrong: "The paper property is absolutely amazing",
+        right: "That they pay for Preply is absolutely amazing",
+        note: "Hilarious phonetic hallucination: 'pay for Preply' was misheard by the AI as 'paper property'!"
+      },
+      {
+        time: "04:02",
+        speaker: "Serena",
+        wrong: "Not our side. The pre platform...",
+        right: "Not outside the Preply platform...",
+        note: "The note-taker misheard 'outside' as 'our side' and clipped 'Preply' to 'pre'."
+      },
+      {
+        time: "05:45",
+        speaker: "Serena",
+        wrong: "And sorry. Poocabulary and, du't. I don't know.",
+        right: "Sorry—vocabulary and... I don't know.",
+        note: "When Serena repeated 'vocabulary' after hearing 'vernacular', the ASR invented the word 'Poocabulary'."
+      },
+      {
+        time: "07:58",
+        speaker: "Serena",
+        wrong: "Probably the feedback that pre-live gives more advanced",
+        right: "Probably like the feedback that Preply gives, but more advanced",
+        note: "Once again, brand name 'Preply' was turned into 'pre-live' by the speech engine."
+      },
+      {
+        time: "11:11",
+        speaker: "Serena",
+        wrong: "every Wednesday launch could give an ad advantage",
+        right: "every Wednesday lunch could give an added advantage",
+        note: "'Wednesday lunch' became 'Wednesday launch', and 'added advantage' was clipped to 'ad advantage'."
+      },
+      {
+        time: "13:54",
+        speaker: "Serena",
+        wrong: "To contract.",
+        right: "To interact / constructive.",
+        note: "In agreeing that bringing solutions is a constructive way to interact with a manager, the ASR wrote 'To contract'."
+      },
+      {
+        time: "15:10",
+        speaker: "Louie",
+        wrong: "We've got way more orders to fill, but we haven't got more stuff",
+        right: "We've got way more orders to fill, but we haven't got more staff",
+        note: "British vowel pronunciation of 'staff' (/stɑːf/) was transcribed as 'stuff'."
+      },
+      {
+        time: "18:14",
+        speaker: "Serena",
+        wrong: "I was thinking that the TED to give context",
+        right: "I was thinking that I tried to give context",
+        note: "'I tried to give context' was creatively misheard as 'the TED to give context'."
+      },
+      {
+        time: "19:45",
+        speaker: "Louie",
+        wrong: "Sorry for these city terms, but puppy Friday",
+        right: "Sorry for these silly terms, but 'Puppy Friday'",
+        note: "Louie's self-deprecating 'silly terms' was transcribed as 'city terms'."
+      },
+      {
+        time: "21:38",
+        speaker: "Serena",
+        wrong: "Please it I guess or no it's it is insider the sentence",
+        right: "It's implicit, I guess—or no, it is inside the sentence",
+        note: "Great C1 word 'implicit' was misheard as 'Please it', and 'inside' became 'insider'."
+      },
+      {
+        time: "27:06",
+        speaker: "Serena",
+        wrong: "I'm going to the here specialist",
+        right: "I'm going to the ear specialist",
+        note: "Homophone mix-up: 'ear specialist' was written as 'here specialist'."
+      },
+      {
+        time: "27:29",
+        speaker: "Serena",
+        wrong: "started from the, right here... with the medicine, the a fortunly starts reducing",
+        right: "started in the right ear... with the medicine, fortunately it started reducing",
+        note: "'Right ear' became 'right here', and 'fortunately' was mangled into 'the a fortunly'."
+      },
+      {
+        time: "28:13",
+        speaker: "Serena",
+        wrong: "the heritage that belongs to the hearing, the continuous window",
+        right: "the earache connected to the hearing, the continuous whistle",
+        note: "Double ASR hallucination: 'earache' became 'heritage' and 'continuous whistle' became 'continuous window'!"
+      }
+    ];
+
+    // 6. Masterclass & Cultural Topics Cards (4 cards)
+    const CULTURAL_PLACES = [
+      {
+        meta: "08:21 – 18:53",
+        badge: "Persuasion Architecture",
+        title: "1. The 4-Step Macro Persuasion Framework",
+        desc: "When pitching an idea to a busy supervisor, accountant, or consulting stakeholder, avoid reeling off a general list of benefits. Instead, appeal directly to their goal-oriented 'lizard brain' with a 4-step arc: (1) Macro Problem (company-wide workload or order surge), (2) Business Effect (risk to morale or deadlines), (3) Concrete Solution (Wednesday staff pizza), and (4) Frictionless Implementation ('I've already sorted it out with a local pizzeria—we just need your approval').",
+        quote: "Serena (16:44): \"Okay, so a wider description of the context.\" — Louie: \"Exactly! Make wellness and welfare relatable to what the decision-maker needs to deliver.\"",
+        tags: ["macro", "the-bigger-picture", "lizard-brain", "stakeholder", "goal-oriented", "implementation"]
+      },
+      {
+        meta: "18:53 – 26:58",
+        badge: "Delivery Mastery",
+        title: "2. Coherent Storytelling vs. Dry Listing ('Puppy Friday' in Crunch Time)",
+        desc: "In your second pitch ('Bring Your Puppy to Work Friday'), your delivery immediately became smoother and more coherent because you framed it as a human story rather than an abstract list. To make a team story even stronger for senior leadership, scale the problem from one individual's dog-sitting conflict to a team-wide 'crunch time' where everyone is 'working flat out' on a heavy workload and needs a free morale boost to hit Friday's deadline.",
+        quote: "Louie (24:41): \"It sounded much more coherent! People love to hear a story much more than a list. When you engage in a story, the listener receives it with far more enthusiasm.\"",
+        tags: ["crunch-time", "work-flat-out", "workload", "keep-morale-up", "coherent", "enthusiasm"]
+      },
+      {
+        meta: "04:06 – 08:21",
+        badge: "Lexical Precision",
+        title: "3. Vocabulary vs. Vernacular: Upgrading 'Stuff' to 'Workload'",
+        desc: "Your passive vocabulary is the bank of English words you recognize when reading or listening; your active vernacular is the repertoire of words you actually deploy in real-time conversation. By taking the note-taking burden off your shoulders during class, we systematically replace everyday fillers ('we have some stuff to do') with sharp C1 consulting vernacular ('we have a heavy workload / key tasks').",
+        quote: "Louie (05:56): \"Vocabulary is the words you know. And vernacular is the words you use. So we're always trying to upgrade the words you use.\"",
+        tags: ["vernacular", "take-a-step-up", "structured", "formulation", "take-the-burden-off", "tailored"]
+      },
+      {
+        meta: "27:03 – 30:50",
+        badge: "Culture & Small Talk",
+        title: "4. London 2015, The Commonwealth & Tinnitus Recovery",
+        desc: "Alongside discussing your afternoon appointment with the ear specialist to treat your ear inflammation and tinnitus (continuous whistle and internal ear pressure), we reflected on your 2015 trip to London. You noted how progressive and welcoming England felt—a cosmopolitan openness shaped by decades of cultural mixing across the British Commonwealth, from the Caribbean to Hong Kong and Australia.",
+        quote: "Serena (29:19): \"I think England is a nice country to visit and to live in—it's a very progressive country.\"",
+        tags: ["progressive", "commonwealth", "inflammation", "tinnitus", "specialist", "therapy"]
+      }
+    ];
+
+    // 7. Flashcards & Quiz (12 Flashcards & 6 Context Quiz Questions)
+    const FLASHCARD_KEYS = [
+      "vernacular",
+      "take-a-step-up",
+      "perk",
+      "take-the-burden-off",
+      "come-across",
+      "lizard-brain",
+      "keep-morale-up",
+      "sort-out",
+      "reel-off",
+      "crunch-time",
+      "work-flat-out",
+      "coherent"
+    ];
+
+    const QUIZ_QUESTIONS = [
+      {
+        q: "1. What is the key difference between your 'vocabulary' and your '________'?",
+        options: ["vernacular", "dimension", "improvisation", "inflammation"],
+        correct: 0,
+        explain: "'Vocabulary' refers to the words you passively know, whereas your 'vernacular' (lessico attivo) is the set of words you actively use when speaking."
+      },
+      {
+        q: "2. Because our consulting team is in ________ before Friday's client deadline, everyone has been working flat out all week.",
+        options: ["crunch time", "city terms", "lizard brain", "commonwealth"],
+        correct: 0,
+        explain: "'Crunch time' is a high-pressure period right before a major deadline when a team has to work intensely ('work flat out')."
+      },
+      {
+        q: "3. Instead of saying 'we have some stuff to do on Friday,' a more professional C1 upgrade is: 'we have a heavy ________.'",
+        options: ["workload", "perk", "recap", "whistle"],
+        correct: 0,
+        explain: "Upgrading vague words like 'stuff' to 'a heavy workload' or 'a lot of tasks' makes your business delivery much sharper."
+      },
+      {
+        q: "4. That your consulting firm in Italy pays for your weekly English lessons on Preply is a wonderful company ________.",
+        options: ["perk", "burden", "dimension", "flow"],
+        correct: 0,
+        explain: "A 'perk' (benefit aziendale) is an extra advantage or benefit provided by an employer on top of your salary."
+      },
+      {
+        q: "5. Rather than ________ a dry list of abstract benefits, wrap your proposal in a macro story that shows how it helps the company hit its goals.",
+        options: ["reeling off", "splitting hairs", "sorting out", "coming across"],
+        correct: 0,
+        explain: "To 'reel off' (snocciolare / elencare a macchinetta) means to recite a list of points quickly without connecting them into an engaging narrative."
+      },
+      {
+        q: "6. 'I've already ________ all the details with a local pizzeria, so we just need your final sign-off to keep team morale up.'",
+        options: ["sorted out", "taken a step up", "fed into", "imparted"],
+        correct: 0,
+        explain: "To 'sort out' (organizzare / sistemare) means to arrange or resolve the practical details so implementation is effortless for your supervisor."
+      }
+    ];
+
+    // =========================================================================
+    // CORE APPLICATION ENGINE (DO NOT REMOVE)
+    // =========================================================================
+    let currentCardIndex = 0;
+    let isCardFlipped = false;
+    let quizAnswered = new Set();
+    let speechRate = 1.0;
+
+    function initHeaderAndHero() {
+      document.getElementById('page-title').textContent = `${LESSON_CONFIG.studentName}'s Peaceful English Sanctuary | ${LESSON_CONFIG.lessonNumber}`;
+      document.getElementById('brand-initial').textContent = LESSON_CONFIG.studentName.charAt(0).toUpperCase();
+      document.getElementById('brand-title').textContent = `${LESSON_CONFIG.studentName}'s Peaceful English Sanctuary`;
+      document.getElementById('brand-badge').textContent = `${LESSON_CONFIG.lessonNumber} • Conversation & Vocabulary`;
+      document.getElementById('hero-meta-pill').textContent = `${LESSON_CONFIG.lessonDate} • ${LESSON_CONFIG.lessonSubtitle}`;
+      document.getElementById('hero-heading').innerHTML = LESSON_CONFIG.heroHeadingHtml;
+      document.getElementById('hero-intro').textContent = LESSON_CONFIG.heroIntroText;
+      document.getElementById('opt-student-speaker').value = LESSON_CONFIG.studentName;
+      document.getElementById('opt-student-speaker').textContent = `${LESSON_CONFIG.studentName}'s Turns Only`;
+      document.getElementById('stat-vocab-count').textContent = `${Object.keys(VOCAB_DB).length} Flagged`;
+      document.getElementById('stat-fixes-count').textContent = `${ASR_FIXES.length} Fixes`;
+
+      const chapters = TRANSCRIPT_TURNS.filter(t => t.chapterId && t.chapterTitle);
+      document.getElementById('chapter-pills-bar').innerHTML = chapters.map(c => `
+        <button onclick="scrollToChapter('${c.chapterId}')" class="px-2.5 py-1 rounded-lg bg-parchment-100 hover:bg-autumn-100 text-stone-700 text-xs font-medium transition border border-parchment-200">
+          ${c.time} • ${c.chapterTitle.split('•')[1] || c.chapterTitle}
+        </button>
+      `).join('');
+    }
+
+    function renderTranscript() {
+      const container = document.getElementById('transcript-stream-container');
+      const searchVal = (document.getElementById('transcript-search')?.value || '').toLowerCase().trim();
+      const speakerFilter = document.getElementById('speaker-filter')?.value || 'all';
+
+      let html = '';
+      TRANSCRIPT_TURNS.forEach(turn => {
+        if (turn.chapterTitle && speakerFilter === 'all' && !searchVal) {
+          html += `
+            <div id="${turn.chapterId}" class="pt-3 pb-1">
+              <div class="px-4 py-2.5 rounded-2xl bg-gradient-to-r from-sage-100/90 via-parchment-100 to-autumn-50 border border-sage-200 flex items-center gap-2 text-xs sm:text-sm font-serif font-bold text-sage-800 shadow-sm">
+                <span>${turn.chapterTitle}</span>
+              </div>
+            </div>
+          `;
+        }
+        if (speakerFilter !== 'all' && turn.speaker !== speakerFilter) return;
+        const plainText = turn.html.replace(/<[^>]+>/g, '').toLowerCase();
+        if (searchVal && !plainText.includes(searchVal) && !turn.time.includes(searchVal)) return;
+
+        const isStudent = turn.speaker !== 'Louie';
+        const cardStyle = isStudent
+          ? 'bg-[#fffdf9] border-l-4 border-l-autumn-500 border border-[#e6decb]'
+          : 'bg-[#f8faf8] border-l-4 border-l-sage-600 border border-[#d8e4dc]';
+        const badgeStyle = isStudent
+          ? 'bg-autumn-100 text-autumn-800 border-autumn-200'
+          : 'bg-sage-100 text-sage-800 border-sage-200';
+
+        html += `
+          <article id="${turn.id}" class="rounded-2xl p-4 sm:p-5 ${cardStyle} shadow-sm transition-all duration-300 space-y-2">
+            <div class="flex items-center justify-between gap-2">
+              <div class="flex items-center gap-2">
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold border ${badgeStyle}">
+                  ${isStudent ? '🌸 ' + turn.speaker : '🍂 Louie'}
+                </span>
+                <span class="font-mono text-xs text-stone-500">🕒 ${turn.time}</span>
+              </div>
+              <button onclick="speakPlainTurn('${turn.id}')" class="text-stone-400 hover:text-sage-700 transition p-1 rounded-lg">
+                <i data-lucide="volume-2" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+            <div class="text-sm sm:text-[15px] text-slatewarm-800 leading-relaxed">${turn.html}</div>
+          </article>
+        `;
+      });
+
+      container.innerHTML = html;
+      lucide.createIcons();
+      initVocabTooltips();
+    }
+
+    function initVocabTooltips() {
+      document.querySelectorAll('.vocab-mark').forEach(el => {
+        const key = el.getAttribute('data-vkey');
+        const item = VOCAB_DB[key];
+        if (!item) return;
+        if (el._tippy) el._tippy.destroy();
+        tippy(el, {
+          theme: 'autumn-sanctuary',
+          allowHTML: true,
+          interactive: true,
+          animation: 'shift-away',
+          maxWidth: 320,
+          content: `
+            <div class="p-2.5 space-y-2 text-left">
+              <div class="flex items-center justify-between gap-2 border-b border-parchment-200 pb-1.5">
+                <div>
+                  <span class="font-serif font-bold text-base text-slatewarm-900">${item.word}</span>
+                  <span class="block font-mono text-[10px] text-stone-500">${item.ipa} • ${item.pos}</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <span class="px-1.5 py-0.5 rounded bg-autumn-100 text-autumn-800 font-mono text-[10px] font-bold">${item.level}</span>
+                  <span class="px-1.5 py-0.5 rounded bg-sage-100 text-sage-800 font-mono text-[10px]">🕒 ${item.time}</span>
+                </div>
+              </div>
+              <p class="text-xs text-stone-700 leading-snug">${item.def}</p>
+              <div class="flex items-center justify-between pt-1 text-[11px] border-t border-parchment-200">
+                <span class="text-sage-800 font-semibold">${item.l1 || item.es || ''}</span>
+                <button onclick="speakWord('${item.word.replace(/'/g, "\\'")}')" class="px-2 py-0.5 rounded bg-sage-700 text-white text-[10px] font-semibold">🔊 Listen</button>
+              </div>
+            </div>
+          `
+        });
+      });
+    }
+
+    function inspectVocab(key) {
+      const item = VOCAB_DB[key];
+      if (!item) return;
+      document.getElementById('insp-time').textContent = `🕒 ${item.time}`;
+      document.getElementById('insp-word').textContent = item.word;
+      document.getElementById('insp-ipa').textContent = item.ipa;
+      document.getElementById('insp-pos').textContent = item.pos;
+      document.getElementById('insp-level').textContent = item.level;
+      document.getElementById('insp-def').textContent = item.def;
+      document.getElementById('insp-quote').textContent = item.quote;
+      document.getElementById('insp-l1-label').textContent = LESSON_CONFIG.l1FlagAndLabel;
+      document.getElementById('insp-l1').textContent = item.l1 || item.es || '';
+      document.getElementById('insp-audio-btn').setAttribute('onclick', `speakWord('${item.word.replace(/\s*\(.*?\)/g, '').replace(/'/g, "\\'")}')`);
+    }
+
+    function renderVocabGrid() {
+      const grid = document.getElementById('vocab-cards-grid');
+      const search = (document.getElementById('vocab-search')?.value || '').toLowerCase().trim();
+      const levelFilter = document.getElementById('vocab-level-filter')?.value || 'all';
+
+      const entries = Object.entries(VOCAB_DB).filter(([key, item]) => {
+        if (levelFilter !== 'all' && item.level !== levelFilter) return false;
+        if (search) {
+          const hay = `${item.word} ${item.def} ${item.l1 || item.es || ''} ${item.time}`.toLowerCase();
+          if (!hay.includes(search)) return false;
+        }
+        return true;
+      });
+
+      grid.innerHTML = entries.map(([key, item]) => `
+        <div class="sanctuary-subcard rounded-2xl p-5 flex flex-col justify-between space-y-3 hover:border-autumn-400">
+          <div class="space-y-2">
+            <div class="flex items-center justify-between gap-2">
+              <div class="flex items-center gap-1.5">
+                <span class="px-2 py-0.5 rounded-md bg-autumn-100 text-autumn-800 font-mono text-[11px] font-bold">${item.level}</span>
+                <span class="px-2 py-0.5 rounded-md bg-parchment-100 text-stone-600 text-[11px]">${item.pos}</span>
+              </div>
+              <button onclick="jumpToTranscriptTurn('${item.turnId}', '${key}')" class="px-2.5 py-0.5 rounded-full bg-sage-100 hover:bg-sage-200 text-sage-800 font-mono text-[11px] font-semibold">
+                🕒 ${item.time} ↗
+              </button>
+            </div>
+            <div class="flex items-center justify-between gap-2 pt-1">
+              <div>
+                <h3 class="font-serif text-xl font-bold text-slatewarm-900">${item.word}</h3>
+                <span class="text-xs font-mono text-stone-500">${item.ipa}</span>
+              </div>
+              <button onclick="speakWord('${item.word.replace(/\s*\(.*?\)/g, '').replace(/'/g, "\\'")}')" class="p-2 rounded-xl bg-parchment-100 hover:bg-sage-100 text-sage-800">
+                <i data-lucide="volume-2" class="w-4 h-4"></i>
+              </button>
+            </div>
+            <p class="text-xs sm:text-sm text-stone-700 leading-relaxed">${item.def}</p>
+            <p class="text-xs italic text-stone-500 bg-parchment-50 p-2.5 rounded-xl border border-parchment-200">${item.quote}</p>
+          </div>
+          <div class="pt-2 border-t border-parchment-200 flex items-center justify-between text-xs">
+            <span class="text-sage-800 font-medium">${item.l1 || item.es || ''}</span>
+            <button onclick="jumpToTranscriptTurn('${item.turnId}', '${key}')" class="text-autumn-700 hover:underline font-semibold text-[11px]">See in Transcript →</button>
+          </div>
+        </div>
+      `).join('');
+      lucide.createIcons();
+    }
+
+    function jumpToTranscriptTurn(turnId, vocabKey) {
+      switchTab('transcript');
+      setTimeout(() => {
+        if (vocabKey) inspectVocab(vocabKey);
+        const el = document.getElementById(turnId);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          el.classList.remove('turn-highlight-flash');
+          void el.offsetWidth;
+          el.classList.add('turn-highlight-flash');
+        }
+      }, 100);
+    }
+
+    function renderFixesAndPlaces() {
+      document.getElementById('student-strengths-grid').innerHTML = STUDENT_STRENGTHS.map(s => `
+        <div class="p-3 rounded-xl bg-white/90 border border-sage-200">
+          <span class="font-mono text-[11px] text-sage-700">${s.time}</span>
+          <div class="font-bold text-slatewarm-900 mt-0.5">${s.phrase}</div>
+          <p class="text-stone-600 mt-0.5">${s.note}</p>
+        </div>
+      `).join('');
+
+      document.getElementById('gentle-polishes-grid').innerHTML = GENTLE_POLISHES.map(p => `
+        <div class="sanctuary-subcard rounded-2xl p-5 space-y-2.5 border-l-4 border-l-sage-500">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold text-sage-800">${p.topic}</span>
+            <span class="px-2 py-0.5 rounded-full bg-parchment-100 font-mono text-[11px] text-stone-600">🕒 ${p.time}</span>
+          </div>
+          <div class="p-2.5 rounded-xl bg-autumn-50/70 border border-autumn-200/80 text-xs text-stone-600">
+            <span class="font-semibold text-autumn-800">In the moment:</span> "${p.said}"
+          </div>
+          <div class="p-2.5 rounded-xl bg-sage-50 border border-sage-200 text-xs text-slatewarm-900 flex items-center justify-between gap-2">
+            <div><span class="font-semibold text-sage-800">Natural Polish:</span> <strong>"${p.natural}"</strong></div>
+            <button onclick="speakWord('${p.natural.replace(/'/g, "\\'")}')" class="p-1.5 rounded-lg bg-white text-sage-700">🔊</button>
+          </div>
+          <p class="text-xs text-stone-600 leading-relaxed">${p.why}</p>
+        </div>
+      `).join('');
+
+      document.getElementById('asr-fixes-grid').innerHTML = ASR_FIXES.map(f => `
+        <div class="sanctuary-subcard rounded-2xl p-4 space-y-2 border-t-2 border-t-autumn-400">
+          <div class="flex items-center justify-between text-[11px] font-mono text-stone-500">
+            <span>${f.speaker}</span><span>🕒 ${f.time}</span>
+          </div>
+          <div class="text-xs line-through text-stone-400">Note-taker wrote: "${f.wrong}"</div>
+          <div class="text-sm font-serif font-bold text-sage-800">Actually said: "${f.right}"</div>
+          <p class="text-xs text-stone-600 leading-relaxed">${f.note}</p>
+        </div>
+      `).join('');
+
+      document.getElementById('cultural-places-grid').innerHTML = CULTURAL_PLACES.map(c => `
+        <div class="sanctuary-subcard rounded-2xl p-6 space-y-3 border-l-4 border-l-autumn-500">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono text-autumn-700 font-semibold">${c.meta}</span>
+            <span class="px-2.5 py-0.5 rounded-full bg-autumn-100 text-autumn-800 text-[11px] font-medium">${c.badge}</span>
+          </div>
+          <h3 class="font-serif text-2xl font-bold text-slatewarm-900">${c.title}</h3>
+          <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">${c.desc}</p>
+          <div class="p-3.5 rounded-xl bg-parchment-50 border border-parchment-200 text-xs italic text-stone-700">${c.quote}</div>
+        </div>
+      `).join('');
+    }
+
+    function renderFlashcard() {
+      const key = FLASHCARD_KEYS[currentCardIndex];
+      const item = VOCAB_DB[key];
+      if (!item) return;
+      document.getElementById('fc-counter').textContent = `Card ${currentCardIndex + 1} of ${FLASHCARD_KEYS.length}`;
+      document.getElementById('fc-badge').textContent = `${item.time} • ${item.pos} (${item.level})`;
+      document.getElementById('fc-front-title').textContent = item.word;
+      const subEl = document.getElementById('fc-sub');
+      const backEl = document.getElementById('fc-back-details');
+      if (!isCardFlipped) {
+        subEl.textContent = `${item.ipa} — Click card to reveal meaning & lesson context`;
+        backEl.classList.add('hidden');
+      } else {
+        subEl.textContent = item.def;
+        document.getElementById('fc-quote').textContent = item.quote;
+        document.getElementById('fc-l1').textContent = item.l1 || item.es || '';
+        backEl.classList.remove('hidden');
+      }
+    }
+    function flipFlashcard() { isCardFlipped = !isCardFlipped; renderFlashcard(); }
+    function nextFlashcard() { isCardFlipped = false; currentCardIndex = (currentCardIndex + 1) % FLASHCARD_KEYS.length; renderFlashcard(); }
+    function prevFlashcard() { isCardFlipped = false; currentCardIndex = (currentCardIndex - 1 + FLASHCARD_KEYS.length) % FLASHCARD_KEYS.length; renderFlashcard(); }
+    function speakCurrentFlashcard() { const item = VOCAB_DB[FLASHCARD_KEYS[currentCardIndex]]; if (item) speakWord(item.word); }
+
+    function renderQuiz() {
+      document.getElementById('quiz-container').innerHTML = QUIZ_QUESTIONS.map((q, qIdx) => `
+        <div class="sanctuary-subcard rounded-2xl p-4 space-y-2.5">
+          <p class="text-xs sm:text-sm font-medium text-slatewarm-900">${q.q}</p>
+          <div class="flex flex-wrap gap-2">
+            ${q.options.map((opt, oIdx) => `
+              <button id="qbtn-${qIdx}-${oIdx}" onclick="answerQuiz(${qIdx}, ${oIdx})" class="px-3 py-1.5 rounded-xl border border-[#dfd0b5] bg-parchment-50 hover:bg-autumn-100 text-xs font-medium text-stone-700 transition">${opt}</button>
+            `).join('')}
+          </div>
+          <p id="qexp-${qIdx}" class="hidden text-xs text-sage-800 bg-sage-50 p-2.5 rounded-xl border border-sage-200"></p>
+        </div>
+      `).join('');
+    }
+
+    function answerQuiz(qIdx, oIdx) {
+      const q = QUIZ_QUESTIONS[qIdx];
+      const expEl = document.getElementById(`qexp-${qIdx}`);
+      q.options.forEach((_, idx) => {
+        const btn = document.getElementById(`qbtn-${qIdx}-${idx}`);
+        if (idx === q.correct) btn.className = 'px-3 py-1.5 rounded-xl border border-sage-500 bg-sage-600 text-white text-xs font-semibold';
+        else if (idx === oIdx) btn.className = 'px-3 py-1.5 rounded-xl border border-autumn-300 bg-autumn-100 text-autumn-900 text-xs';
+      });
+      expEl.textContent = `✨ ${q.explain}`;
+      expEl.classList.remove('hidden');
+      if (oIdx === q.correct && !quizAnswered.has(qIdx)) {
+        quizAnswered.add(qIdx);
+        document.getElementById('quiz-score-badge').textContent = `${quizAnswered.size} / ${QUIZ_QUESTIONS.length} Completed`;
+        if (quizAnswered.size === QUIZ_QUESTIONS.length && typeof confetti === 'function') {
+          confetti({ particleCount: 55, spread: 60, origin: { y: 0.7 } });
+        }
+      }
+    }
+
+    function switchTab(tabName) {
+      ['transcript', 'vocab', 'fixes', 'places', 'practice'].forEach(t => {
+        const panel = document.getElementById(`tab-panel-${t}`);
+        const btn = document.getElementById(`tab-btn-${t}`);
+        if (t === tabName) {
+          panel.classList.remove('hidden');
+          btn.className = 'tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 bg-sage-700 text-white shadow-sm';
+        } else {
+          panel.classList.add('hidden');
+          btn.className = 'tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 text-stone-700 hover:bg-parchment-100';
+        }
+      });
+    }
+
+    function filterTranscript() { renderTranscript(); }
+    function scrollToChapter(chapId) {
+      document.getElementById('speaker-filter').value = 'all';
+      document.getElementById('transcript-search').value = '';
+      renderTranscript();
+      const el = document.getElementById(chapId);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    let highlightsOn = true;
+    function toggleVocabHighlights() {
+      highlightsOn = !highlightsOn;
+      document.body.classList.toggle('hide-vocab-highlights', !highlightsOn);
+      document.getElementById('btn-toggle-highlights').querySelector('span').textContent = `Vocab Highlights: ${highlightsOn ? 'On' : 'Off'}`;
+    }
+
+    let asrBadgesOn = true;
+    function toggleAsrBadges() {
+      asrBadgesOn = !asrBadgesOn;
+      document.body.classList.toggle('hide-asr-fixes', !asrBadgesOn);
+      document.getElementById('btn-toggle-asr').querySelector('span').textContent = `Note-Taker Fixes: ${asrBadgesOn ? 'Visible' : 'Hidden'}`;
+    }
+
+    function setThemeMood(mood) { document.body.setAttribute('data-theme', mood); }
+    function setVoiceRate(rate) { speechRate = rate; }
+
+    function speakWord(text) {
+      if (!('speechSynthesis' in window)) return;
+      window.speechSynthesis.cancel();
+      const utter = new SpeechSynthesisUtterance(text);
+      utter.lang = 'en-GB';
+      utter.rate = speechRate;
+      window.speechSynthesis.speak(utter);
+    }
+
+    function speakPlainTurn(turnId) {
+      const turn = TRANSCRIPT_TURNS.find(t => t.id === turnId);
+      if (!turn) return;
+      const temp = document.createElement('div');
+      temp.innerHTML = turn.html;
+      temp.querySelectorAll('.asr-fix-pill').forEach(el => el.remove());
+      speakWord(temp.textContent || '');
+    }
+
+    // Web Audio API Soundscape Engine
+    let audioCtx = null, soundscapePlaying = false, masterGain = null, lfoTimer = null, currentFilter = null;
+    function buildNoiseBuffer(ctx) {
+      const bufferSize = ctx.sampleRate * 4;
+      const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+      const output = buffer.getChannelData(0);
+      let b0 = 0, b1 = 0, b2 = 0, b3 = 0, b4 = 0, b5 = 0, b6 = 0;
+      for (let i = 0; i < bufferSize; i++) {
+        const white = Math.random() * 2 - 1;
+        b0 = 0.99886 * b0 + white * 0.0555179;
+        b1 = 0.99332 * b1 + white * 0.0750759;
+        b2 = 0.96900 * b2 + white * 0.1538520;
+        b3 = 0.86650 * b3 + white * 0.3104856;
+        b4 = 0.55000 * b4 + white * 0.5329522;
+        b5 = -0.7616 * b5 - white * 0.0168980;
+        output[i] = (b0 + b1 + b2 + b3 + b4 + b5 + b6 + white * 0.5362) * 0.04;
+        b6 = white * 0.115926;
+      }
+      return buffer;
+    }
+
+    function toggleSoundscape() {
+      const label = document.getElementById('soundscape-label');
+      if (!soundscapePlaying) {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (!audioCtx) audioCtx = new AudioContext();
+        if (audioCtx.state === 'suspended') audioCtx.resume();
+        const noiseSource = audioCtx.createBufferSource();
+        noiseSource.buffer = buildNoiseBuffer(audioCtx);
+        noiseSource.loop = true;
+        currentFilter = audioCtx.createBiquadFilter();
+        masterGain = audioCtx.createGain();
+        masterGain.gain.value = parseFloat(document.getElementById('soundscape-volume').value || '0.22');
+        noiseSource.connect(currentFilter);
+        currentFilter.connect(masterGain);
+        masterGain.connect(audioCtx.destination);
+        noiseSource.start();
+        audioCtx._activeSource = noiseSource;
+        soundscapePlaying = true;
+        changeSoundscapePreset(document.getElementById('soundscape-preset').value);
+        label.textContent = 'London Breeze: Playing';
+      } else {
+        if (lfoTimer) clearInterval(lfoTimer);
+        if (audioCtx && audioCtx._activeSource) { try { audioCtx._activeSource.stop(); } catch (e) {} }
+        soundscapePlaying = false;
+        label.textContent = 'London Breeze Audio: Off';
+      }
+    }
+
+    function changeSoundscapePreset(preset) {
+      if (!currentFilter || !audioCtx) return;
+      if (lfoTimer) clearInterval(lfoTimer);
+      if (preset === 'breeze') {
+        currentFilter.type = 'bandpass';
+        currentFilter.frequency.value = 340;
+      } else if (preset === 'rain') {
+        currentFilter.type = 'lowpass';
+        currentFilter.frequency.value = 880;
+      } else {
+        currentFilter.type = 'lowpass';
+        currentFilter.frequency.value = 240;
+      }
+    }
+    function updateSoundscapeVolume(val) { if (masterGain && audioCtx) masterGain.gain.value = parseFloat(val); }
+
+    // Canvas Autumn Leaves Engine
+    const canvas = document.getElementById('autumn-breeze-canvas');
+    const ctx = canvas.getContext('2d');
+    let leaves = [], leafMode = 1, breezeTime = 0;
+    const LEAF_COLORS = ['rgba(190,111,56,0.42)', 'rgba(211,140,87,0.40)', 'rgba(165,191,177,0.42)', 'rgba(203,179,142,0.45)'];
+    function resizeCanvas() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+    function rebuildLeaves() {
+      const count = leafMode === 1 ? 15 : leafMode === 2 ? 30 : 0;
+      leaves = Array.from({ length: count }, () => ({
+        x: Math.random() * canvas.width, y: Math.random() * canvas.height,
+        size: 6 + Math.random() * 8, speedY: 0.35 + Math.random() * 0.55, speedX: 0.25 + Math.random() * 0.45,
+        angle: Math.random() * Math.PI * 2, spin: (Math.random() - 0.5) * 0.014, swayOffset: Math.random() * 100,
+        color: LEAF_COLORS[Math.floor(Math.random() * LEAF_COLORS.length)]
+      }));
+    }
+    function cycleLeafBreeze() {
+      leafMode = (leafMode + 1) % 3;
+      document.getElementById('leaves-label').textContent = leafMode === 1 ? 'Leaves: Gentle' : leafMode === 2 ? 'Leaves: Breeze' : 'Leaves: Still';
+      rebuildLeaves();
+    }
+    function animateLeaves() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      if (leafMode !== 0) {
+        breezeTime += 0.01;
+        leaves.forEach(l => {
+          l.y += l.speedY; l.x += l.speedX + Math.sin(breezeTime + l.swayOffset) * 0.45; l.angle += l.spin;
+          if (l.y > canvas.height + 20) { l.y = -20; l.x = Math.random() * canvas.width; }
+          if (l.x > canvas.width + 20) l.x = -20;
+          ctx.save(); ctx.translate(l.x, l.y); ctx.rotate(l.angle); ctx.fillStyle = l.color;
+          ctx.beginPath(); ctx.ellipse(0, 0, l.size, l.size * 0.52, 0, 0, Math.PI * 2); ctx.fill(); ctx.restore();
+        });
+      }
+      requestAnimationFrame(animateLeaves);
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      try {
+        initHeaderAndHero();
+        renderTranscript();
+        renderVocabGrid();
+        renderFixesAndPlaces();
+        renderFlashcard();
+        renderQuiz();
+        if (LESSON_CONFIG.defaultSpotlightKey) inspectVocab(LESSON_CONFIG.defaultSpotlightKey);
+        rebuildLeaves();
+        animateLeaves();
+        if (typeof lucide !== 'undefined' && lucide.createIcons) lucide.createIcons();
+      } catch (err) {
+        console.error('Initialization error caught safely:', err);
+      }
+    });
+  </script>
+</body>
+</html>
